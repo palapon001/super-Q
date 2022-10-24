@@ -26,7 +26,7 @@ extract($row);
             <td> hname :</td>
             <td>
                 <select name="hname">
-                    <option value="" selected disabled hidden></option>
+                    <option value="<?php echo $hname; ?>"  selected> <?php echo $hname; ?> </option>
                     <option value="นาย">นาย</option>
                     <option value="นางสาว">นางสาว</option>
                     <option value="นาง">นาง</option>
