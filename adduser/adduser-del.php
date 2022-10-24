@@ -1,5 +1,5 @@
 <?php
-include('condb.php'); 
+include('../condb.php'); 
 $user_id = $_REQUEST["user_id"];
 
 $sql = "DELETE FROM user WHERE user_id='$user_id' ";

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'condb.php';
+include '../condb.php';
 
 $user_id = mysqli_real_escape_string($con, $_GET['user_id']);
 
@@ -12,37 +12,62 @@ $row = mysqli_fetch_array($result);
 extract($row);
 ?>
 
-        <form method="post" action="adduser-edit-db.php">
-            <h3 >แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
-            <table  align="center">
-                <tr>
-                    <td> name :</td>
-                    <td>
-                        <input type="text" name="name" value="<?php echo $name; ?>"  />
-                        <input type="hidden" name="user_id" value="<?php echo $user_id; ?>" />
+<form method="post" action="adduser-edit-db.php">
+    <h3>แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
+    <table align="center">
+        <tr>
+            <td> user id  </td>
+            <td>
+                <input name="user_id" value="<?php echo $user_id; ?>" type="text">
+            </td>
+        </tr>
 
-                    </td>
-                </tr>
-                <tr>
+        <tr>
+            <td> hname :</td>
+            <td>
+                <select name="hname">
+                    <option value="" selected disabled hidden></option>
+                    <option value="นาย">นาย</option>
+                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาง">นาง</option>
+                </select>
 
-                <tr>
-                    <td> lname </td>
-                    <td>
-                        <input name="lname" value="<?php echo $lname; ?>" type="text" id="password">
-                    </td>
+            </td>
+        </tr>
+        <tr>
+            <td> name :</td>
+            <td>
+                <input type="text" name="name" value="<?php echo $name; ?>" />
+            </td>
+        </tr>
+        <tr>
+
+        <tr>
+            <td> lname </td>
+            <td>
+                <input name="lname" value="<?php echo $lname; ?>" type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td> tel </td>
+            <td>
+                <input name="tel" value="<?php echo $tel; ?>" type="text">
+            </td>
+        </tr>
 
 
 
 
 
-            </table>
-            <button type="button" onclick="history.back() "> ยกเลิก </button>
-            <input type="submit"  value="แก้ไข">
-        </form>
+    </table>
+    <button type="button" onclick="history.back() "> ยกเลิก </button>
+    <input type="submit" value="แก้ไข">
+</form>
 
 
 
-    </div>
+</div>
 
 
 </body>
