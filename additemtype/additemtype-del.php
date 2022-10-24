@@ -1,5 +1,5 @@
 <?php
-include('condb.php'); 
+include('../condb.php'); 
 $item_type_id = $_REQUEST["item_type_id"];
 
 $sql = "DELETE FROM item_type WHERE item_type_id='$item_type_id' ";

@@ -5,7 +5,7 @@ include '../condb.php';
 
 $user_id = mysqli_real_escape_string($con, $_GET['user_id']);
 
-//2. query ข้อมูลจากตาราง: 
+//2. query ข้อมูลจากตาราง  : 
 $sql = "SELECT * FROM user WHERE user_id='$user_id' ";
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 $row = mysqli_fetch_array($result);
@@ -23,7 +23,7 @@ extract($row);
         </tr>
 
         <tr>
-            <td> hname :</td>
+            <td> คำนำหน้า :</td>
             <td>
                 <select name="hname">
                     <option value="<?php echo $hname; ?>"  selected> <?php echo $hname; ?> </option>
@@ -35,7 +35,7 @@ extract($row);
             </td>
         </tr>
         <tr>
-            <td> name :</td>
+            <td> ชื่อ :</td>
             <td>
                 <input type="text" name="name" value="<?php echo $name; ?>" />
             </td>
@@ -43,7 +43,7 @@ extract($row);
         <tr>
 
         <tr>
-            <td> lname </td>
+            <td> นามสกุล </td>
             <td>
                 <input name="lname" value="<?php echo $lname; ?>" type="text">
             </td>

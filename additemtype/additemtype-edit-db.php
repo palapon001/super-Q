@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <?php
-include('condb.php');  
+include('../condb.php');  
 //สร้างตัวแปรสำหรับรับค่าที่นำมาแก้ไขจากฟอร์ม
 $item_type_id = $_POST["item_type_id"];
 $item_type_name = $_POST["item_type_name"];

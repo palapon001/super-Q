@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'condb.php';
+include '../condb.php';
 
 $item_type_id = mysqli_real_escape_string($con, $_GET['item_type_id']);
 

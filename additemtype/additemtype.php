@@ -2,9 +2,9 @@
 if (!$_SESSION["id"]) {  //check session
     Header("Location: index.php"); //ไม่พบผู้ใช้กระโดดกลับไปหน้า login form 
 } else {
-    echo '<a href="logout.php">Log out</a>';
+    echo '<a href="../logout.php">Log out</a>';
 }
-include 'condb.php';
+include '../condb.php';
 mysqli_query($con, "SET NAMES UTF8");
 ?>
 
