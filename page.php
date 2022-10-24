@@ -25,6 +25,10 @@ if (!$_SESSION["id"]) {  //check session
     <p>
         <a href="./additemtype/additemtype.php">จัดการ ประเภทสินค้า</a>
     </p>
+    <p>
+        <a href="./addsale_person/addsale_person.php">จัดการ รับซื้อข้าว</a>
+    </p>
+
 
 
 
