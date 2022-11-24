@@ -1,10 +1,6 @@
 <?php session_start();
 if (!$_SESSION["id"]) {  //check session
     Header("Location: ../index.php"); //ไม่พบผู้ใช้กระโดดกลับไปหน้า login form 
-} else {
-    echo '<div class="d-flex justify-content-end">';
-    echo '<a href="logout.php" class="btn btn-danger">X</a>';
-    echo '</div>';
 }
 ?>
 
@@ -23,33 +19,60 @@ if (!$_SESSION["id"]) {  //check session
 <body>
     <?php
     include 'bootstrap.php';
+    include 'Nav.php';
     ?>
+    <div class="card">
+        <div class="card-body">
+            <h2>ประเภทข้าว</h2>
+            <?php
+            include './condb.php';
+            $sql = " SELECT * FROM item_type ORDER BY item_type_id ASC ";
+            $q = mysqli_query($con, $sql);
+            $no = 1;
+            while ($f = mysqli_fetch_assoc($q)) {
+            ?>
+                <button class="btn btn-danger"><?php echo $f['item_type_name']; ?> </button>
+            <?php
+                $no++;
+            }
+            ?>
+            <p>
+            <div class="container text-center">
+                <div class="row">
+                    <?php
+                    $sql1 = " SELECT * FROM item ORDER BY itemid ASC ";
+                    $q = mysqli_query($con, $sql1);
+                    $no = 1;
+                    while ($f = mysqli_fetch_assoc($q)) {
+                    ?>
 
-    <!-- Simulate a smartphone / tablet -->
-    <div class="container">
+                      
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcnaYCELk-MeSCeUkQVdw0pyy2JnncIvS8FA&usqp=CAU" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
+                                    <p class="card-text">รายละเอียด</p>
+                                    <a href="#" class="btn btn-primary">ใส่ตะกร้า</a>
+                                </div>
+                            </div>
+                        </div>
+                       
 
-        <!-- Top Navigation Menu -->
-        <div class="topnav">
-            <a href="#home" class="active">System</a>
-            <div id="myLinks">
-                <a href="./adduser/adduser.php">จัดการ สมาชิก</a>
-                <a href="./additemtype/additemtype.php">จัดการ ประเภทสินค้า</a>
-                <a href="./addsale_person/addsale_person.php">จัดการ รับซื้อข้าว</a>
+
+                    <?php
+                        $no++;
+                    }
+                    mysqli_close($con);
+                    ?>
+
+                </div>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+            </p>
         </div>
-
-        <div class="card">
-            <div class="card-body">
-                <h1>You are Administrator </h1>
-                <p><strong>hi</strong> :&nbsp;<?php print_r($_SESSION); ?> //show detail login
-            </div>
-        </div>
-
-        <!-- End smartphone / tablet look -->
     </div>
+
+
 
 </body>
 <script src="./menu.js"></script>
