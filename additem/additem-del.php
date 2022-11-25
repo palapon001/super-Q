@@ -1,8 +1,8 @@
 <?php
 include('../condb.php'); 
-$item_type_id = $_REQUEST["item_type_id"];
+$ItemID = $_POST["ItemID"];
 
-$sql = "DELETE FROM item_type WHERE item_type_id='$item_type_id' ";
+$sql = "DELETE FROM ItemID WHERE ItemID='$ItemID' ";
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
@@ -10,7 +10,7 @@ $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 if ($result) {
   echo "<script type='text/javascript'>";
   echo "alert('ลบ เสร็จสิ้น');";
-  echo "window.location = './additemtype.php'; ";
+  echo "window.location = './additem.php'; ";
   echo "</script>";
 } else {
   echo "<script type='text/javascript'>";
