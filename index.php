@@ -12,7 +12,6 @@ include 'bootstrap.php';
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="card">
             <div class="card-body" >
-                <h1>jjjj</h1>
                 <?
                 include 'login.php';
                 ?>
