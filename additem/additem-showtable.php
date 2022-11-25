@@ -1,5 +1,5 @@
 
-<table>
+<table class='table'>
     <tr>
     <td>no</td>
         <td>itemid</td>
@@ -26,8 +26,8 @@
             <td><?php echo $f['Price']; ?> </td>
             <td><?php echo $f['imageFileName']; ?> </td>
             <td><?php echo $f['ItemTypeID']; ?> </td>
-            <td><a href='additem-editform.php?ItemID=<?php echo $f['ItemID']; ?> ' class="">แก้ไข</a></td>
-            <td><a href='additem-del.php?ItemID=<?php echo $f['ItemID']; ?> ' class="" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
+            <td><a href='additem-editform.php?ItemID=<?php echo $f['ItemID']; ?> ' class="btn btn-warning">แก้ไข</a></td>
+            <td><a href='additem-del.php?ItemID=<?php echo $f['ItemID']; ?> ' class="btn btn-danger" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
 
         </tr>
 
