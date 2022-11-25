@@ -1,4 +1,4 @@
-<?php
+<?
 include 'bootstrap.php';
 ?>
 <!DOCTYPE html>
@@ -12,7 +12,8 @@ include 'bootstrap.php';
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="card">
             <div class="card-body" >
-                <?php
+                <h1>jjjj</h1>
+                <?
                 include 'login.php';
                 ?>
             </div>
