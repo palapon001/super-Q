@@ -10,7 +10,17 @@
             <div class="col-sm-6 mb-2">
                 <div class="card text-bg-warning">
                     <div class="card-body">
-                        <h2 class="card-title">10</h2>
+                        <h2 class="card-title">
+                            <?php
+                            include 'condb.php';
+                            $quser = mysqli_query($con, " SELECT * FROM user  ");
+                            $no = 0;
+                            while ($f = mysqli_fetch_assoc($quser)) {
+                                $no++;
+                            }
+                            echo $no;
+                            ?>
+                        </h2>
                         <p class="card-text">จำนวน USER</p>
                     </div>
                 </div>
@@ -18,8 +28,18 @@
             <div class="col-sm-6">
                 <div class="card text-bg-primary">
                     <div class="card-body">
-                        <h2 class="card-title">10</h2>
-                        <p class="card-text">จำนวน USER</p>
+                        <h2 class="card-title">
+                        <?php
+                            include 'condb.php';
+                            $qitem = mysqli_query($con, " SELECT * FROM item  ");
+                            $no = 0;
+                            while ($f = mysqli_fetch_assoc($qitem)) {
+                                $no++;
+                            }
+                            echo $no;
+                            ?>
+                        </h2>
+                        <p class="card-text">จำนวน สินค้า</p>
                     </div>
                 </div>
             </div>
@@ -28,16 +48,36 @@
             <div class="col-sm-6 mb-2">
                 <div class="card text-bg-danger">
                     <div class="card-body">
-                        <h2 class="card-title">10</h2>
-                        <p class="card-text">จำนวน USER</p>
+                        <h2 class="card-title">
+                        <?php
+                            include 'condb.php';
+                            $qitemtype = mysqli_query($con, " SELECT * FROM item_type  ");
+                            $no = 0;
+                            while ($f = mysqli_fetch_assoc($qitemtype)) {
+                                $no++;
+                            }
+                            echo $no;
+                            ?>
+                        </h2>
+                        <p class="card-text">จำนวน ประเภทสินค้า</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="card text-bg-success">
                     <div class="card-body">
-                        <h2 class="card-title">10</h2>
-                        <p class="card-text">จำนวน USER</p>
+                        <h2 class="card-title">
+                        <?php
+                            include 'condb.php';
+                            $qsales_person = mysqli_query($con, " SELECT * FROM sales_person  ");
+                            $no = 0;
+                            while ($f = mysqli_fetch_assoc($qsales_person)) {
+                                $no++;
+                            }
+                            echo $no;
+                            ?>
+                        </h2>
+                        <p class="card-text">จำนวน การรับซื้อข้าว</p>
                     </div>
                 </div>
             </div>

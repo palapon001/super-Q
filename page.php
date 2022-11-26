@@ -15,6 +15,7 @@ if (!$_SESSION["id"]) {  //check session
 
 <body>
     <?php
+    
     include 'bootstrap.php';
     include 'Nav.php';
     ?>
