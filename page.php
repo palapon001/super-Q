@@ -57,10 +57,9 @@ if (!$_SESSION["id"]) {  //check session
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                     <p class="card-text">รายละเอียด</p>
                                     <form action="Cart-add.php" method="post">
-                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
-                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
-                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
-                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="QTY" value="1">
+                                        <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
                                         <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
                                     </form>
                                 </div>
