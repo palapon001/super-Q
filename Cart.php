@@ -1,11 +1,11 @@
 <!-- Button trigger modal -->
-<a type="button" class="icon me-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<span class="material-symbols-outlined">
-<i>shopping_cart</i>
-</span>
-     </a>
-     
+<a type="button" class="icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <div class="material-symbols-outlined btn btn-primary">
+    <i>shopping_cart</i>
+</div>
+</a>
+
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
