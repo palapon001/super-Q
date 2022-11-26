@@ -8,7 +8,7 @@ if (!$_SESSION["id"]) {  //check session
 <html>
 
 <head>
-<?php
+    <?php
     include 'HeadDetail.php';
     ?>
 </head>
@@ -18,8 +18,14 @@ if (!$_SESSION["id"]) {  //check session
     include 'bootstrap.php';
     include 'Nav.php';
     ?>
+
     <div class="card">
         <div class="card-body">
+
+            <?php
+            include 'Dashboard.php';
+            ?>
+
             <h2>ประเภทข้าว</h2>
             <?php
             include './condb.php';
@@ -43,18 +49,24 @@ if (!$_SESSION["id"]) {  //check session
                     while ($f = mysqli_fetch_assoc($q)) {
                     ?>
 
-                      
+
                         <div class="col">
                             <div class="card" style="width: 18rem;">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcnaYCELk-MeSCeUkQVdw0pyy2JnncIvS8FA&usqp=CAU" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                     <p class="card-text">รายละเอียด</p>
-                                    <a href="#" class="btn btn-primary">ใส่ตะกร้า</a>
+                                    <form action="Cart-add.php" method="post">
+                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                       
+
 
 
                     <?php
@@ -72,4 +84,5 @@ if (!$_SESSION["id"]) {  //check session
 
 
 </body>
+
 </html>
