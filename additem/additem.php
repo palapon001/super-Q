@@ -13,12 +13,12 @@ mysqli_query($con, "SET NAMES UTF8");
     <?php
     include '../HeadDetail.php';
     include '../bootstrap.php';
-    include '../Nav2.php';
     ?>
 </head>
 
 <body>
     <div class="card">
+        <a href="../page.php" class="btn btn-dark "> หน้าหลัก </a>
         <div class="card-body">
             <form neme="form" method="post" action="additem-add.php">
                 <label class="form-label">เพิ่ม item : </label>
@@ -29,9 +29,12 @@ mysqli_query($con, "SET NAMES UTF8");
                 <input class="mt-3 form-control" type="text" name="imageFileName" placeholder="imageFileName" />
                 <input class="mt-3 form-control" type="text" name="ItemTypeID" placeholder="itemtypeid" />
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
+
             </form>
             <p>
-                <p><h2>ตารางสินค้า</h2></p>
+            <p>
+            <h2>ตารางสินค้า</h2>
+            </p>
             <div class="table-responsive">
                 <?php include './additem-showtable.php' ?>
             </div>
