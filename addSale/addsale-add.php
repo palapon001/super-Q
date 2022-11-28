@@ -44,7 +44,7 @@ mysqli_close($con);
 if ($result) {
     echo "<script type='text/javascript'>";
     echo "alert('สำเร็จ');";
-    echo "window.location = '../page.php'; ";
+    echo "window.location = 'addsale.php'; ";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";
