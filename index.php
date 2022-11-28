@@ -10,11 +10,13 @@ include 'bootstrap.php';
 
 <body>
     <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="card">
-            <div class="card-body" >
-                <?php
-                include 'login.php';
-                ?>
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+                <center>
+                    <?php
+                    include 'login.php';
+                    ?>
+                </center>
             </div>
         </div>
     </div>
