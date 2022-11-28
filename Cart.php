@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <div class="material-symbols-outlined btn btn-primary">
     <i>shopping_cart</i>
-</div>
+  </div>
 </a>
 
 <!-- Modal -->
@@ -15,14 +15,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <?php 
-        include 'condb.php' ;
-        include 'Cart-showtable.php' ;
-         ?>
+        <?php
+        include 'condb.php';
+        include 'Cart-showtable.php';
+        ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Payment</button>
+        <form action="./addSale/addsale-add.php" method="post">
+          <input type="submit" class="btn btn-primary" value="Payment">
+        </form>
       </div>
     </div>
   </div>

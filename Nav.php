@@ -1,6 +1,7 @@
  <div class="collapse" id="navbarToggleExternalContent">
      <div class="bg-dark p-4">
          <h5 class="text-white h4">Menu</h5>
+         <a class='btn btn-primary mb-1' href="./addSale/addsale.php">แสดงรายการขาย</a>
          <a class='btn btn-primary mb-1' href="./adduser/adduser.php">จัดการ สมาชิก</a>
          <a class='btn btn-primary mb-1' href="./additem/additem.php">จัดการ สินค้า</a>
          <a class='btn btn-primary mb-1' href="./additemtype/additemtype.php">จัดการ ประเภทสินค้า</a>
