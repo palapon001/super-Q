@@ -29,7 +29,7 @@ mysqli_close($con);
 
 if ($result) {
 	echo "<script type='text/javascript'>";
-	echo "alert('สำเร็จ');";
+	//echo "alert('สำเร็จ');";
 	echo "window.location = 'page.php'; ";
 	echo "</script>";
 } else {
