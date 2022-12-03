@@ -56,10 +56,11 @@ if (!$_SESSION["id"]) {  //check session
 
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcnaYCELk-MeSCeUkQVdw0pyy2JnncIvS8FA&usqp=CAU" class="card-img-top" alt="...">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVq_1AdQgj9JVocJh8SPhVPDoQxugEO0kB-g&usqp=CAU&fbclid=IwAR1hDAjhrx60gq3dvi1Y_JdKpMkQYVMDp4u2iw78aydVSumURZux_qRObeQ" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
-                                    <p class="card-text">รายละเอียด</p>
+                                    <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
+                                    <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
                                     <form action="Cart-add.php" method="post">
                                         <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
                                         <input type="hidden" name="QTY" value="1">
