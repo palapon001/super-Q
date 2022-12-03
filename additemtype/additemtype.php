@@ -20,7 +20,7 @@ mysqli_query($con, "SET NAMES UTF8");
     <div class="card">
         <a href="../page.php" class="btn btn-dark "> หน้าหลัก </a>
         <div class="card-body">
-            <form neme="form" method="post" action="additemtype-add.php">
+            <form neme="form" method="post" action="additemtypeadd.php">
                 <label>เพิ่ม itemtype : </label>
                 <input class="mt-3 form-control" type="text" name="itemtypename" placeholder="name" />
                 <input class="mt-3 form-control" type="submit" neme="save" value="save" />
