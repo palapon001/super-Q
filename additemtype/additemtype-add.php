@@ -2,6 +2,7 @@
 include('../condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 //สร้างตัวแปรเก็บค่าที่รับมาจากฟอร์ม
 $itemtypename = $_POST["itemtypename"];
+//
 // เช็คว่ามีข้อมูลนี้อยู่หรือไม่
 $check = "select * from item_type  where item_type_name = '$itemtypename' ";
 $result1 = mysqli_query($con,$check) or die("$check");
