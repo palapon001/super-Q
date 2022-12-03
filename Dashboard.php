@@ -21,7 +21,7 @@
                             echo $no;
                             ?>
                         </h2>
-                        <p class="card-text">จำนวน USER</p>
+                        <p class="card-text">จำนวนสมาชิก</p>
                     </div>
                 </div>
             </div>

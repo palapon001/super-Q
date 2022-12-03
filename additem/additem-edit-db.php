@@ -21,7 +21,7 @@ mysqli_close($con); //ปิดการเชื่อมต่อ database
 if ($result) {
 	echo "<script type='text/javascript'>";
 	echo "alert('สำเร็จ');";
-	echo "window.location = 'additemtype.php'; ";
+	echo "window.location = 'additem.php'; ";
 	echo "</script>";
 } else {
 	echo "<script type='text/javascript'>";
