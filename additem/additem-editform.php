@@ -29,7 +29,7 @@ extract($row);
         <div class="card-body">
             <h3 class="card-title">แก้ไขข้อมูล <?php echo $ItemName; ?> </h3>
             <p class="card-text">
-            <form method="post" action="additemtype-edit-db.php">
+            <form method="post" action="additem-edit-db.php">
 
                 <input class="mt-3 form-control" type="text" name="ItemName" value="<?php echo $ItemName; ?>" />
 

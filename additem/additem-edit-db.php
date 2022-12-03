@@ -2,7 +2,7 @@
 <?php
 include('../condb.php');
 //สร้างตัวแปรสำหรับรับค่าที่นำมาแก้ไขจากฟอร์ม
-$itemID = $_POST["itemID"];
+$ItemID = $_POST["ItemID"];
 $ItemName = $_POST["ItemName"];
 $Amount = $_POST["Amount"];
 $Price = $_POST["Price"];
@@ -11,10 +11,10 @@ $ItemTypeID = $_POST["ItemTypeID"];
 //ทำการปรับปรุงข้อมูลที่จะแก้ไขลงใน database 
 
 $sql = "UPDATE `item` 
-SET `ItemID`= '$itemID',`ItemName`='$ItemName'
+SET `ItemID`= '$ItemID',`ItemName`='$ItemName'
 ,`Amount`='$Amount',`Price`='$Price'
 ,`imageFileName`='$imageFileName'
-,`ItemTypeID`='$ItemTypeID' WHERE $itemID";
+,`ItemTypeID`='$ItemTypeID' WHERE ItemID = '$ItemID' ";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 
