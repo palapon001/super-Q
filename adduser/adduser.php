@@ -29,7 +29,7 @@ mysqli_query($con, "SET NAMES UTF8");
                     <option value="นางสาว">นางสาว</option>
                     <option value="นาง">นาง</option>
                 </select>
-                <input  class="mt-3 form-control" type="text" name="name" placeholder="name" />
+                <input class="mt-3 form-control" type="text" name="name" placeholder="name" />
                 <input class="mt-3 form-control" type="text" name="lname" placeholder="lname">
                 <input class="mt-3 form-control" type="number" name="tel" placeholder="tel">
                 <input class="mt-3 form-control" type="submit" neme="save" value="save" />
@@ -45,4 +45,5 @@ mysqli_query($con, "SET NAMES UTF8");
         </div>
     </div>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 
-<table>
+<table class='table'>
     <tr>
         <td>item_type_id</td>
         <td>item_type_name</td>

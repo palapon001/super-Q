@@ -1,4 +1,4 @@
-<table>
+<table class='table'>
     <tr>
     <td>no.</td>
         <td>user_id</td>
