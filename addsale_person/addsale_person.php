@@ -22,16 +22,16 @@ mysqli_query($con, "SET NAMES UTF8");
         <div class="card-body">
             <form neme="form" method="post" action="addsale_person-add.php">
                 <label>เพิ่ม การรับซื้อ: </label>
-                <input type="text" name="user_id" placeholder="user_id" />
-                <input type="text" name="sale_p_name" placeholder="sale_p_name" />
-                <input type="text" name="sale_p_lname" placeholder="sale_p_lname" />
-                <input type="text" name="item_type_id" placeholder="item_type_id" />
-                <input type="text" name="sale_p_qtyitem" placeholder="sale_p_qtyitem" />
-                <input type="submit" neme="save" value="save" />
+                <input class="mt-3 form-control" type="text" name="user_id" placeholder="user_id" />
+                <input class="mt-3 form-control" type="text" name="sale_p_name" placeholder="sale_p_name" />
+                <input class="mt-3 form-control" type="text" name="sale_p_lname" placeholder="sale_p_lname" />
+                <input class="mt-3 form-control" type="text" name="item_type_id" placeholder="item_type_id" />
+                <input class="mt-3 form-control" type="text" name="sale_p_qtyitem" placeholder="sale_p_qtyitem" />
+                <input class="mt-3 form-control" type="submit" neme="save" value="save" />
             </form>
             <p>
             <p>
-            <h2>ตาราง User </h2>
+            <h2>ตารางรับซื้อข้าว </h2>
             </p>
             <div class="table-responsive">
                 <?php include './addsale_person-showtable.php'; ?>

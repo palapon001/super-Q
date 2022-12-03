@@ -22,12 +22,12 @@ mysqli_query($con, "SET NAMES UTF8");
         <div class="card-body">
             <form neme="form" method="post" action="additemtype-add.php">
                 <label>เพิ่ม itemtype : </label>
-                <input type="text" name="itemtypename" placeholder="name" />
-                <input type="submit" neme="save" value="save" />
+                <input class="mt-3 form-control" type="text" name="itemtypename" placeholder="name" />
+                <input class="mt-3 form-control" type="submit" neme="save" value="save" />
             </form>
             <p>
             <p>
-            <h2>ตาราง User </h2>
+            <h2>ตาราง ประเภท </h2>
             </p>
             <div class="table-responsive">
                 <?php include './additemtype-showtable.php' ?>
