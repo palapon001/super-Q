@@ -1,18 +1,22 @@
 <meta charset="UTF-8">
 <?php
-include('../condb.php');  
+include('../condb.php');
 //สร้างตัวแปรสำหรับรับค่าที่นำมาแก้ไขจากฟอร์ม
-$item_type_id = $_POST["item_type_id"];
-$item_type_name = $_POST["item_type_name"];
-
+$itemID = $_POST["itemID"];
+$ItemName = $_POST["ItemName"];
+$Amount = $_POST["Amount"];
+$Price = $_POST["Price"];
+$imageFileName = $_POST["imageFileName"];
+$ItemTypeID = $_POST["ItemTypeID"];
 //ทำการปรับปรุงข้อมูลที่จะแก้ไขลงใน database 
 
-$sql = "UPDATE item_type SET  
-				item_type_id='$item_type_id', 
-				item_type_name ='$item_type_name'
-			WHERE item_type_id='$item_type_id' ";
+$sql = "UPDATE `item` 
+SET `ItemID`= '$itemID',`ItemName`='$ItemName'
+,`Amount`='$Amount',`Price`='$Price'
+,`imageFileName`='$imageFileName'
+,`ItemTypeID`='$ItemTypeID' WHERE $itemID";
 
-$result = mysqli_query($con, $sql) or die("Error in query: $sql " );
+$result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 
 mysqli_close($con); //ปิดการเชื่อมต่อ database 
 

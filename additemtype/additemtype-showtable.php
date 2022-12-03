@@ -1,8 +1,8 @@
 
 <table class='table'>
     <tr>
-        <td>item_type_id</td>
-        <td>item_type_name</td>
+        <td>ลำดับ</td>
+        <td>ชื่อประเภทสินค้า</td>
         <td>แก้ไข</td>
         <td>ลบ</td>
     </tr>
