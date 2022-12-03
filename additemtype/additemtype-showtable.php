@@ -16,8 +16,8 @@
         <tr>
             <td><?php echo $no; ?></td>
             <td><?php echo $f['item_type_name']; ?> </td>
-            <td><a href='additemtype-editform.php?item_type_id= <?php echo $f['item_type_id']; ?> ' class="">แก้ไข</a></td>
-            <td><a href='additemtype-del.php?item_type_id= <?php echo $f['item_type_id']; ?> ' class="" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
+            <td><a href='additemtype-editform.php?item_type_id= <?php echo $f['item_type_id']; ?> ' class="btn btn-warning">แก้ไข</a></td>
+            <td><a href='additemtype-del.php?item_type_id= <?php echo $f['item_type_id']; ?> ' class="btn btn-danger" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
 
         </tr>
 

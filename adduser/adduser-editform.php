@@ -23,8 +23,7 @@ extract($row);
 </head>
 
 <body>
-
-    <div class="card mt-3">
+    <div class="card ">
         <div class="card-body">
             <h3 class="card-title">แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
             <p class="card-text">
@@ -53,8 +52,6 @@ extract($row);
             </p>
         </div>
     </div>
-
-
 
 </body>
 
