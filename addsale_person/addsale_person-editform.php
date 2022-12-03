@@ -12,62 +12,38 @@ $row = mysqli_fetch_array($result);
 extract($row);
 ?>
 
-<form method="post" action="addsale_person-edit-db.php">
-    <h3>แก้ไขข้อมูล <?php echo $sale_p_id; ?> </h3>
-    <table align="center">
-        <tr>
-            <td> sale_p_id :</td>
-            <td>
-                <input type="text" name="sale_p_id" value="<?php echo $sale_p_id; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> user_id :</td>
-            <td>
-                <input type="text" name="user_id" value="<?php echo $user_id; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> sale_p_name :</td>
-            <td>
-                <input type="text" name="sale_p_name" value="<?php echo $sale_p_name; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> sale_p_lname :</td>
-            <td>
-                <input type="text" name="sale_p_lname" value="<?php echo $sale_p_lname; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> item_type_id :</td>
-            <td>
-                <input type="text" name="item_type_id" value="<?php echo $item_type_id; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> sale_p_qtyitem :</td>
-            <td>
-                <input type="text" name="sale_p_qtyitem" value="<?php echo $sale_p_qtyitem; ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td> datetime :</td>
-            <td>
-                <input type="datetime-local" name="datetime" value="<?php echo $datetime; ?>" />
-            </td>
-        </tr>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php
+    include '../HeadDetail.php';
+    include '../bootstrap.php';
+    ?>
+</head>
+
+<body>
+    <div class="card ">
+        <div class="card-body">
+            <h3 class="card-title">แก้ไขข้อมูล <?php echo $sale_p_name; ?> </h3>
+            <p class="card-text">
+
+            <form method="post" action="addsale_person-edit-db.php">
+                <input class="mt-3 form-control" type="text" name="sale_p_id" value="<?php echo $sale_p_id; ?>" />
+                <input class="mt-3 form-control" type="text" name="user_id" value="<?php echo $user_id; ?>" />
+                <input class="mt-3 form-control" type="text" name="sale_p_name" value="<?php echo $sale_p_name; ?>" />
+                <input class="mt-3 form-control" type="text" name="sale_p_lname" value="<?php echo $sale_p_lname; ?>" />
+                <input class="mt-3 form-control" type="text" name="item_type_id" value="<?php echo $item_type_id; ?>" />
+                <input class="mt-3 form-control" type="text" name="sale_p_qtyitem" value="<?php echo $sale_p_qtyitem; ?>" />
+                <input class="mt-3 form-control"type="datetime-local" name="datetime" value="<?php echo $datetime; ?>" />
+                <button type="button" class="mt-3 btn btn-danger" onclick="history.back() "> ยกเลิก </button>
+                <input type="submit" class="mt-3 btn btn-warning" value="แก้ไข">
+            </form>
 
 
-
-    </table>
-    <button type="button" onclick="history.back() "> ยกเลิก </button>
-    <input type="submit" value="แก้ไข">
-</form>
-
-
-
-</div>
+            </p>
+        </div>
+    </div>
 
 
 </body>
