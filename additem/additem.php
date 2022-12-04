@@ -22,7 +22,6 @@ mysqli_query($con, "SET NAMES UTF8");
         <div class="card-body">
             <form neme="form" method="post" action="additem-add.php">
                 <label class="form-label">เพิ่ม item : </label>
-                <input class="mt-3 form-control" type="text" name="ItemID" placeholder="ItemID" />
                 <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ItemName" />
                 <input class="mt-3 form-control" type="number" name="Amount" placeholder="Amount" />
                 <input class="mt-3 form-control" type="number" name="Price" placeholder="price" />
