@@ -21,18 +21,18 @@ mysqli_query($con, "SET NAMES UTF8");
         <a href="../page.php" class="btn btn-dark "> หน้าหลัก </a>
         <div class="card-body">
             <form neme="form" method="post" action="adduser-add.php">
-                <label>เพิ่ม user : </label>
-                <input class="mt-3 form-control" type="text" name="user_id" placeholder="user_id" />
+                <label>เพิ่ม สมาชิก : </label>
+                <input class="mt-3 form-control" type="text" name="user_id" placeholder="เลขบัตรประชาชน" />
                 <select class="mt-3 form-control" name="hname">
-                    <option value="" selected disabled hidden></option>
+                    <option value="" selected disabled hidden>คำนำหน้าชื่อ</option>
                     <option value="นาย">นาย</option>
                     <option value="นางสาว">นางสาว</option>
                     <option value="นาง">นาง</option>
                 </select>
-                <input class="mt-3 form-control" type="text" name="name" placeholder="name" />
-                <input class="mt-3 form-control" type="text" name="lname" placeholder="lname">
-                <input class="mt-3 form-control" type="number" name="tel" placeholder="tel">
-                <input class="mt-3 form-control" type="submit" neme="save" value="save" />
+                <input class="mt-3 form-control" type="text" name="name" placeholder="ชื่อ" />
+                <input class="mt-3 form-control" type="text" name="lname" placeholder="นามสกุล">
+                <input class="mt-3 form-control" type="number" name="tel" placeholder="เบอร์">
+                <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
             </form>
             <p>
             <p>

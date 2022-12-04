@@ -12,28 +12,34 @@ $row = mysqli_fetch_array($result);
 extract($row);
 ?>
 
-<form method="post" action="additemtype-edit-db.php">
-    <h3>แก้ไขข้อมูล <?php echo $item_type_id; ?> </h3>
-    <table align="center">
-        <tr>
-            <td> item_type_name :</td>
-            <td>
-                <input type="text" name="item_type_name" value="<?php echo $item_type_name; ?>" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php
+    include '../HeadDetail.php';
+    include '../bootstrap.php';
+    ?>
+</head>
+
+<body>'
+    <div class="card ">
+        <div class="card-body">
+            <h3 class="card-title">แก้ไขข้อมูล <?php echo $item_type_name; ?> </h3>
+            <p class="card-text">
+            <form method="post" action="additemtype-edit-db.php">
+                <input class="mt-3 form-control" type="text" name="item_type_name" value="<?php echo $item_type_name; ?>" />
                 <input type="hidden" name="item_type_id" value="<?php echo $item_type_id; ?>" />
-
-            </td>
-        </tr>
-        <tr>
-
-
-    </table>
-    <button type="button" onclick="history.back() "> ยกเลิก </button>
-    <input type="submit" value="แก้ไข">
-</form>
+                <button class="mt-3 btn btn-danger" type="button" onclick="history.back() "> ยกเลิก </button>
+                <input type="submit" value="แก้ไข" class="mt-3 btn btn-warning">
+            </form>
+            </p>
+        </div>
+    </div>
 
 
 
-</div>
+    </div>
 
 
 </body>

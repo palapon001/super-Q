@@ -12,63 +12,46 @@ $row = mysqli_fetch_array($result);
 extract($row);
 ?>
 
-<form method="post" action="adduser-edit-db.php">
-    <h3>แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
-    <table align="center">
-        <tr>
-            <td> user id  </td>
-            <td>
-                <input name="user_id" value="<?php echo $user_id; ?>" type="text">
-            </td>
-        </tr>
+<!DOCTYPE html>
+<html lang="en">
 
-        <tr>
-            <td> คำนำหน้า :</td>
-            <td>
-                <select name="hname">
-                    <option value="<?php echo $hname; ?>"  selected> <?php echo $hname; ?> </option>
+<head>
+    <?php
+    include '../HeadDetail.php';
+    include '../bootstrap.php';
+    ?>
+</head>
+
+<body>
+    <div class="card ">
+        <div class="card-body">
+            <h3 class="card-title">แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
+            <p class="card-text">
+
+            <form method="post" action="adduser-edit-db.php">
+
+                <input class="mt-3 form-control" name="user_id" value="<?php echo $user_id; ?>" type="text">
+
+                <select class="mt-3 form-control" name="hname">
+                    <option value="<?php echo $hname; ?>" selected> <?php echo $hname; ?> </option>
                     <option value="นาย">นาย</option>
                     <option value="นางสาว">นางสาว</option>
                     <option value="นาง">นาง</option>
                 </select>
 
-            </td>
-        </tr>
-        <tr>
-            <td> ชื่อ :</td>
-            <td>
-                <input type="text" name="name" value="<?php echo $name; ?>" />
-            </td>
-        </tr>
-        <tr>
+                <input class="mt-3 form-control" type="text" name="name" value="<?php echo $name; ?>" />
 
-        <tr>
-            <td> นามสกุล </td>
-            <td>
-                <input name="lname" value="<?php echo $lname; ?>" type="text">
-            </td>
-        </tr>
+                <input class="mt-3 form-control" name="lname" value="<?php echo $lname; ?>" type="text">
 
-        <tr>
-            <td> tel </td>
-            <td>
-                <input name="tel" value="<?php echo $tel; ?>" type="text">
-            </td>
-        </tr>
+                <input class="mt-3 form-control" name="tel" value="<?php echo $tel; ?>" type="text">
 
+                <button type="button" class='mt-3 btn btn-danger' onclick="history.back() "> ยกเลิก </button>
+                <input type="submit" class='mt-3 btn btn-warning' value="แก้ไข">
+            </form>
 
-
-
-
-    </table>
-    <button type="button" onclick="history.back() "> ยกเลิก </button>
-    <input type="submit" value="แก้ไข">
-</form>
-
-
-
-</div>
-
+            </p>
+        </div>
+    </div>
 
 </body>
 

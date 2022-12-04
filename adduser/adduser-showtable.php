@@ -1,7 +1,7 @@
 <table class='table'>
     <tr>
-    <td>no.</td>
-        <td>user_id</td>
+    <td>ลำดับ</td>
+        <td>เลขบัครประชาชน</td>
         <td>ชื่อ</td>
         <td>นามสกุล</td>
         <td>เบอร์</td>
@@ -21,10 +21,8 @@
             <td><?php echo $f['name']; ?> </td>
             <td><?php echo $f['lname']; ?> </td>
             <td><?php echo $f['tel']; ?> </td>
-            <td><a href='adduser-editform.php?user_id=<?php echo $f['user_id']; ?>' class="">แก้ไข</a></td>
-
-            <td><a href='adduser-del.php?user_id=<?php echo $f['user_id']; ?>' class="" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
-
+            <td><a href='adduser-editform.php?user_id=<?php echo $f['user_id']; ?>' class="btn btn-warning">แก้ไข</a></td>
+            <td><a href='adduser-del.php?user_id=<?php echo $f['user_id']; ?>' class="btn btn-danger" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
         </tr>
 
     <?php

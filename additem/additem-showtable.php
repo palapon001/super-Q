@@ -1,13 +1,12 @@
 
 <table class='table'>
     <tr>
-    <td>no</td>
-        <td>itemid</td>
-        <td>itemname</td>
-        <td>amount</td>
-        <td>price</td>
-        <td>img</td>
-        <td>itemtypeid</td>
+        <td>ลำดับ</td>
+        <td>ชื่อสินค้า</td>
+        <td>จำนวน</td>
+        <td>ราคา</td>
+        <td>รูปภาพ</td>
+        <td>ประเภทสินค้า</td>
         <td>แก้ไข</td>
         <td>ลบ</td>
     </tr>
@@ -15,11 +14,9 @@
 
     $sql = " SELECT * FROM item ORDER BY ItemID ASC ";
     $q = mysqli_query($con, $sql);
-    $no = 1;
     while ($f = mysqli_fetch_assoc($q)) {
     ?>
         <tr>
-            <td><?php echo $no; ?></td>
             <td><?php echo $f['ItemID']; ?> </td>
             <td><?php echo $f['ItemName']; ?> </td>
             <td><?php echo $f['Amount']; ?> </td>
@@ -32,7 +29,6 @@
         </tr>
 
     <?php
-        $no++;
     }
 
     echo "</table>";
