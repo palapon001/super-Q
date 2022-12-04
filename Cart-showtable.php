@@ -18,7 +18,7 @@
         <td><?php echo $no; ?></td>
         <td><?php echo $f['ItemName']; ?> </td>
         <td>
-          <input type="text"  id="the_input_id<?php echo $no; ?>" class="form-control" value="<?php echo $f['QTY']; ?> ">
+          <input type="text" id="the_input_id<?php echo $no; ?>" class="form-control" value="" required>
         </td>
         <td>
           <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
@@ -34,7 +34,7 @@
                 var input1 = parseInt($('#the_input_id<?php echo $no; ?>').val());
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
                 $('#total<?php echo $no; ?>').text(totals);
-
+                $('#totalsum').text(<?php echo $totalsum; ?> + totals)
               };
 
             });
@@ -44,7 +44,7 @@
             <?php echo $f['TotalPrice']; ?>
           </div>
 
-         
+
         </td>
         <td><a href='Cart-del.php?Cartno=<?php echo $f['Cartno']; ?>' class="btn btn-danger" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
 
@@ -58,5 +58,11 @@
     echo "</table>";
 
     ?>
-    <h1>ราคารวม : <?php echo $totalsum; ?></h1>
+    <h1>
+      ราคารวม :
+      <div id="totalsum">
+
+      </div>
+    </h1>
+
 </div>
