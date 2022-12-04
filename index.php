@@ -6,8 +6,7 @@ include 'bootstrap.php';
 
 <head>
     <?php
-    include '../HeadDetail.php';
-    include '../bootstrap.php';
+    include 'HeadDetail.php';
     ?>
 </head>
 
