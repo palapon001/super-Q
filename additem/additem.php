@@ -22,11 +22,21 @@ mysqli_query($con, "SET NAMES UTF8");
         <div class="card-body">
             <form neme="form" method="post" action="additem-add.php">
                 <label class="form-label">เพิ่ม item : </label>
-                <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ItemName" />
-                <input class="mt-3 form-control" type="number" name="Amount" placeholder="Amount" />
-                <input class="mt-3 form-control" type="number" name="Price" placeholder="price" />
-                <input class="mt-3 form-control" type="text" name="imageFileName" placeholder="imageFileName" />
-                <input class="mt-3 form-control" type="text" name="ItemTypeID" placeholder="itemtypeid" />
+                <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ชื่อสินค้า" required />
+                <input class="mt-3 form-control" type="number" name="Amount" placeholder="จำนวน" required />
+                <input class="mt-3 form-control" type="number" name="Price" placeholder="ราคา" required />
+                <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ" required />
+                <select class="mt-3 form-control" name="ItemTypeID">
+                    <option value="" selectdisabled>ประเภทสินค้า</option>
+                    <?php
+                    $qitem_type = mysqli_query($con, " SELECT * FROM item_type  ");
+                    while ($f = mysqli_fetch_assoc($qitem_type)) {
+                    ?>
+                        <option value="<?php echo $f['item_type_name']; ?>"> <?php echo $f['item_type_name']; ?> </option>
+                    <?php
+                    }
+                    ?>
+                </select>
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
 
             </form>
