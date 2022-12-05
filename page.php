@@ -56,7 +56,7 @@ if (!$_SESSION["id"]) {  //check session
 
                         <div class="col-md-auto">
                             <div class="card mt-3" style="width: 18rem;">
-                                <img src="<?php echo $f['imageFileName']; ?>" class="card-img-top" alt="...">
+                                <img src="<?php echo $f['imageFileName']; ?>" onerror="this.onerror=null; this.src='Logo.png'" class="card-img-top" width="200" height="200">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                     <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>

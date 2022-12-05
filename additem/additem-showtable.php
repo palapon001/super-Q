@@ -22,7 +22,7 @@
             <td><?php echo $f['Amount']; ?> </td>
             <td><?php echo $f['Price']; ?> </td>
             <td>
-                <img src="<?php echo $f['imageFileName']; ?>" width="auto" height="50" >
+                <img src="<?php echo $f['imageFileName']; ?>" onerror="this.onerror=null; this.src='Logo.png'" width="auto" height="50" >
             </td>
             <td><?php echo $f['ItemTypeID']; ?> </td>
             <td><a href='additem-editform.php?ItemID=<?php echo $f['ItemID']; ?> ' class="btn btn-warning">แก้ไข</a></td>
