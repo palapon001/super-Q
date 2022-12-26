@@ -41,10 +41,7 @@
             });
           </script>
 
-<input class="form-control" type="text" id="total<?php echo $no; ?>" name="number" value="<?php echo $f['TotalPrice']; ?>"/>
-          <div name="pree" id="total<?php echo $no; ?>" value="">
-            
-          </div>
+<input class="form-control" type="text" id="total<?php echo $no; ?>" name="number" value=""/>
 
 
         </td>
