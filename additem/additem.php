@@ -25,7 +25,7 @@ mysqli_query($con, "SET NAMES UTF8");
                 <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ชื่อสินค้า" required />
                 <input class="mt-3 form-control" type="number" name="Amount" placeholder="จำนวน" required />
                 <input class="mt-3 form-control" type="number" name="Price" placeholder="ราคา" required />
-                <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ" required />
+                <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ"/>
                 <select class="mt-3 form-control" name="ItemTypeID">
                     <option value="" selectdisabled>ประเภทสินค้า</option>
                     <?php
