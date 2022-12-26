@@ -21,6 +21,7 @@
           <input type="text" id="the_input_id<?php echo $no; ?>" class="form-control" value="" required>
         </td>
         <td>
+          <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
 
           <script type='text/javascript'>
             $(function() {
@@ -67,5 +68,3 @@
     </h1>
 
 </div>
-
-<script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
