@@ -1,3 +1,4 @@
+<form action="/Cart-UpdateTable.php">
 <div class="table-responsive">
   <table class="table">
     <tr>
@@ -63,5 +64,9 @@
       <?php echo $totalsum ?>
       </div>
     </h1>
+   
+        <input class="btn btn-primary" type="submit" value="คำนวณรายการใหม่">
+       
 
 </div>
+</form>
