@@ -49,9 +49,15 @@
 
       </tr>
 <script>
+  $(function() {
+
+$('#the_input_id<?php echo $no; ?>').keyup(function() {
+  updateTotal();
+});
   var esum = parseFloat(document.getElementById("total<?php echo $no; ?>"));
   var sumsum = sumsum + esum;
   $('#totalsum?>').text(sumsum);     
+  });
 </script>
     <?php
       $totalsum += $f['TotalPrice'];
