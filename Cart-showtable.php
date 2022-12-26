@@ -35,7 +35,7 @@
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
                 var sum = document.getElementById("#total<?php echo $no; ?>").value;  
                 $('#total<?php echo $no; ?>').text(totals);
-                $('#totalsum').text(sum + sum);
+                $('#totalsum').text(sum);
               };
 
             });
