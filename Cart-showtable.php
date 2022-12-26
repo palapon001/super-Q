@@ -21,7 +21,6 @@
           <input type="text" id="the_input_id<?php echo $no; ?>" class="form-control" value="" required>
         </td>
         <td>
-          <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
 
           <script type='text/javascript'>
             $(function() {
@@ -35,7 +34,7 @@
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
                 $('#total<?php echo $no; ?>').text(totals);
                 var esum = parseFloat(document.getElementById("total<?php echo $no; ?>").value);
-                $('#totalsum').text(esum+esum);
+                $('#totalsum').text(esum);
               };
 
             });
@@ -68,3 +67,5 @@
     </h1>
 
 </div>
+
+<script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
