@@ -41,7 +41,7 @@
             });
           </script>
 
-<input class="form-control" type="text" id="total<?php echo $no; ?>" name="number" value=""/>
+<input class="form-control" type="text" id="total<?php echo $no; ?>"  value=""/>
 
 
         </td>
