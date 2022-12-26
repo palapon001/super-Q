@@ -1,7 +1,6 @@
 <?php
 include('../condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 //สร้างตัวแปรเก็บค่าที่รับมาจากฟอร์ม
-$ItemID = $_POST["ItemID"];
 $ItemName = $_POST["ItemName"];
 $Amount = $_POST["Amount"];
 $Price = $_POST["Price"];
@@ -24,8 +23,11 @@ $result1 = mysqli_query($con,$check) or die("$check");
 		$imageFileName = "https://s10q.herokuapp.com/Logo.png" ;
 	}
 //เพิ่มเข้าไปในฐานข้อมูล
-$sql = "INSERT INTO item( ItemID,ItemName,Amount,Price,imageFileName,ItemTypeID)
-			 VALUES('$ItemID','$ItemName','$Amount','$Price','$imageFileName','$ItemTypeID')";
+if ($imageFileName == "") {
+	$imageFileName = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVq_1AdQgj9JVocJh8SPhVPDoQxugEO0kB-g&usqp=CAU&fbclid=IwAR1hDAjhrx60gq3dvi1Y_JdKpMkQYVMDp4u2iw78aydVSumURZux_qRObeQ" ;
+}
+$sql = "INSERT INTO item(ItemName,Amount,Price,imageFileName,ItemTypeID)
+			 VALUES('$ItemName','$Amount','$Price','$imageFileName','$ItemTypeID')";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql " );
   }

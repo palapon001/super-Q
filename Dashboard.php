@@ -82,10 +82,11 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card text-bg-success">
+                <div class="card text-bg-info">
                     <div class="card-body">
                         <h2 class="card-title">
                         <?php
+                        //
                             include 'condb.php';
                             $qsale = mysqli_query($con, " SELECT * FROM sale  ");
                             $no = 0;

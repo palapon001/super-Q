@@ -34,13 +34,12 @@
                 var input1 = parseInt($('#the_input_id<?php echo $no; ?>').val());
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
                 $('#total<?php echo $no; ?>').text(totals);
-                $('#totalsum').text(<?php echo $totalsum; ?> + totals)
               };
 
             });
           </script>
 
-          <div name="pree" id="total<?php echo $no; ?>">
+          <div name="pree" id="total<?php echo $no; ?>" value="">
             <?php echo $f['TotalPrice']; ?>
           </div>
 

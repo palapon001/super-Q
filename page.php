@@ -25,7 +25,7 @@ if (!$_SESSION["id"]) {  //check session
 
             <?php
             include 'Dashboard.php';
-            ?> 
+            ?>
             <form class="d-flex mb-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -54,9 +54,9 @@ if (!$_SESSION["id"]) {  //check session
                     ?>
 
 
-                        <div class="col">
+                        <div class="col-md-auto">
                             <div class="card mt-3" style="width: 18rem;">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVq_1AdQgj9JVocJh8SPhVPDoQxugEO0kB-g&usqp=CAU&fbclid=IwAR1hDAjhrx60gq3dvi1Y_JdKpMkQYVMDp4u2iw78aydVSumURZux_qRObeQ" class="card-img-top" alt="...">
+                                <img src="<?php echo $f['imageFileName']; ?>" onerror="this.onerror=null; this.src='Logo.png'" class="card-img-top" width="200" height="200">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                     <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
@@ -72,13 +72,12 @@ if (!$_SESSION["id"]) {  //check session
                         </div>
 
 
-
                     <?php
                         $no++;
                     }
+
                     mysqli_close($con);
                     ?>
-
                 </div>
             </div>
             </p>
