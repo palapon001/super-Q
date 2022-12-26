@@ -41,9 +41,10 @@
             });
           </script>
 
-          <div name="pree" id="total<?php echo $no; ?>" value="">
-            <?php echo $f['TotalPrice']; ?>
-          </div>
+<input type="text" id="total<?php echo $no; ?>" name="number" value="<?php echo $f['TotalPrice']; ?>"/>
+          <!-- <div name="pree" id="total<?php echo $no; ?>" value="">
+            
+          </div> -->
 
 
         </td>
