@@ -22,6 +22,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <button class="btn btn-primary" onclick="sumNumbers()">Sum</button>
         <form action="./addSale/addsale-add.php" method="post">
           <input type="submit" class="btn btn-primary" value="Payment">
         </form>

@@ -59,8 +59,8 @@
     ?>
     <h1>
       ราคารวม :
-      <div id="totalsum">
-
+      <div id="">
+      <?php echo $totalsum ?>
       </div>
     </h1>
 
