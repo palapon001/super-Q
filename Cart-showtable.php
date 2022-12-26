@@ -34,8 +34,6 @@
                 var input1 = parseInt($('#the_input_id<?php echo $no; ?>').val());
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
                 $('#total<?php echo $no; ?>').text(totals);
-                var esum = parseFloat(document.getElementById("total<?php echo $no; ?>").value)||0;
-                $('#totalsum').text(esum);
               };
 
             });
