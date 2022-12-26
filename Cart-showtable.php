@@ -33,8 +33,8 @@
               var updateTotal = function() {
                 var input1 = parseInt($('#the_input_id<?php echo $no; ?>').val());
                 var totals = parseFloat(input1 * <?php echo $f['TotalPrice']; ?>) || 0;
-                var sum = document.getElementById("#total<?php echo $no; ?>").value;  
                 $('#total<?php echo $no; ?>').text(totals);
+                var sum = document.getElementById("#total<?php echo $no; ?>").value;  
                 $('#totalsum').text(sum);
               };
 
