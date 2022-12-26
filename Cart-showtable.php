@@ -39,7 +39,9 @@
             });
           </script>
 
-<input class="form-control" type="number" id="total<?php echo $no; ?>"  value=" <?php echo $f['TotalPrice']; ?>" disabled />
+          <div name="pree" id="total<?php echo $no; ?>" value="">
+            <?php echo $f['TotalPrice']; ?>
+          </div>
 
 
         </td>
