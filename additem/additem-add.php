@@ -20,6 +20,9 @@ $result1 = mysqli_query($con,$check) or die("$check");
 		 echo "</script>";
 
   }else{
+	if($imageFileName == ""){
+		$imageFileName = "https://s10q.herokuapp.com/Logo.png" ;
+	}
 //เพิ่มเข้าไปในฐานข้อมูล
 $sql = "INSERT INTO item( ItemID,ItemName,Amount,Price,imageFileName,ItemTypeID)
 			 VALUES('$ItemID','$ItemName','$Amount','$Price','$imageFileName','$ItemTypeID')";

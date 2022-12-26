@@ -26,7 +26,7 @@ mysqli_query($con, "SET NAMES UTF8");
                 <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ItemName" />
                 <input class="mt-3 form-control" type="number" name="Amount" placeholder="Amount" />
                 <input class="mt-3 form-control" type="number" name="Price" placeholder="price" />
-                <input class="mt-3 form-control" type="text" name="imageFileName" placeholder="imageFileName" />
+                <input class="mt-3 form-control" type="text" name="imageFileName"/>
                 <input class="mt-3 form-control" type="text" name="ItemTypeID" placeholder="itemtypeid" />
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
 
