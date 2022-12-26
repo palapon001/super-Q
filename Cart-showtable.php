@@ -48,17 +48,7 @@
         <td><a href='Cart-del.php?Cartno=<?php echo $f['Cartno']; ?>' class="btn btn-danger" onclick="return confirm('ต้องการจะลบหรือไม่')">ลบ</a></td>
 
       </tr>
-<script>
-  $(function() {
 
-$('#the_input_id<?php echo $no; ?>').keyup(function() {
-  updateTotal();
-});
-  var esum = parseFloat(document.getElementById("total<?php echo $no; ?>"));
-  var sumsum = sumsum + esum;
-  $('#totalsum?>').text(sumsum);     
-  });
-</script>
     <?php
       $totalsum += $f['TotalPrice'];
       $no++;
