@@ -26,10 +26,10 @@ if (!$_SESSION["id"]) {  //check session
             <?php
             include 'Dashboard.php';
             ?>
-            <form class="d-flex mb-3" role="search">
+            <!-- <form class="d-flex mb-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> -->
             <h2>ประเภทข้าว</h2>
             <?php
             include './condb.php';
