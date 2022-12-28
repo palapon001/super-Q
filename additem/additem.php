@@ -26,17 +26,7 @@ mysqli_query($con, "SET NAMES UTF8");
                 <input class="mt-3 form-control" type="number" name="Amount" placeholder="จำนวน" required />
                 <input class="mt-3 form-control" type="number" name="Price" placeholder="ราคา" required />
                 <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ"/>
-                <select class="mt-3 form-control" name="ItemTypeID">
-                    <option value="" selectdisabled>ประเภทสินค้า</option>
-                    <?php
-                    $qitem_type = mysqli_query($con, " SELECT * FROM item_type  ");
-                    while ($f = mysqli_fetch_assoc($qitem_type)) {
-                    ?>
-                        <option value="<?php echo $f['item_type_name']; ?>"> <?php echo $f['item_type_name']; ?> </option>
-                    <?php
-                    }
-                    ?>
-                </select>
+                <?php include 'selectProductType.php' ; ?>
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
 
             </form>

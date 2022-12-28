@@ -39,7 +39,7 @@ extract($row);
 
                 <input class="mt-3 form-control" type="text" name="imageFileName" value="<?php echo $imageFileName; ?>" />
 
-                <input class="mt-3 form-control" type="text" name="ItemTypeID" value="<?php echo $ItemTypeID; ?>" />
+                <?php include 'selectProductType.php' ; ?>
 
 
 
