@@ -1,8 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-
 <div class="table-responsive">
-
   <table class="table">
     <tr>
       <td>ลำดับ</td>
@@ -21,10 +18,13 @@
         <td><?php echo $no; ?></td>
         <td><?php echo $f['ItemName']; ?> </td>
         <td>
-          <input type="text" name="ip<?php echo $no; ?>" id="ip<?php echo $no; ?>" class="form-control" value="" required>
+          <div class="input-group mb-3">
+            <input type="text" name="ip<?php echo $no; ?>" id="ip<?php echo $no; ?>" class="form-control" value="" required>
+            <span class="input-group-text">x<?php echo $f['TotalPrice']; ?></span>
+          </div>
         </td>
         <td>
-          <div class="input-group mb-3 w-75">
+          <div class="input-group mb-3">
             <form id="lines-form-1">
               <input class="form-control" id="i<?php echo $no; ?>" name="total<?php echo $no; ?>" type="text" value="0" disabled>
             </form>
@@ -37,8 +37,13 @@
       </tr>
       <script>
         $('input[name=ip<?php echo $no; ?>]').on('keyup', function() {
-          var qty = this.value; ;
-            $('input[name=total<?php echo $no; ?>]').val(qty*<?php echo $f['TotalPrice']; ?>);
+          var qty = this.value;;
+          var tot = 0;
+          $('input[name=total<?php echo $no; ?>]').val(qty * <?php echo $f['TotalPrice']; ?>);
+          $("form#lines-form-1 :input").each(function() {
+            tot += Number($(this).val());
+          });
+          $('#tot-qty').text(tot);
         });
       </script>
     <?php
@@ -53,13 +58,3 @@
     </h1>
 
 </div>
-
-<script>
-  $('form#lines-form-1 :input').change(function() {
-    var tot = 0;
-    $("form#lines-form-1 :input").each(function() {
-      tot += Number($(this).val());
-    });
-    $('#tot-qty').text(tot);
-  });
-</script>
