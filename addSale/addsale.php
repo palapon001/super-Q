@@ -15,7 +15,7 @@
             <div class="row">
                 <?php
                 include '../condb.php';
-                $qsale = mysqli_query($con, " SELECT * FROM sale  ");
+                $qsale = mysqli_query($con, " SELECT * FROM sale ORDER BY saledate desc ");
                 while ($f = mysqli_fetch_assoc($qsale)) {
                     $saleno = $f['saleno'];
                     $qsaledetail = mysqli_query($con, " SELECT * FROM saledetail where SaleNo = '$saleno'");
@@ -45,13 +45,14 @@
                                                 </tr>
                                             </thead>
                                             <?php
+                                            $no = 1;
                                             while ($g = mysqli_fetch_assoc($qsaledetail)) {
                                             ?>
                                                 <ul class="list-group list-group-flush">
 
                                                     <tbody>
                                                         <tr>
-                                                            <td> <?php echo $g['SaleDetailNo']; ?> </td>
+                                                            <td> <?php echo $no; ?> </td>
                                                             <td> <?php echo $g['SaleNo']; ?></td>
                                                             <td> <?php echo $g['ItemName']; ?></td>
                                                             <td> <?php echo $g['QTY']; ?></td>
@@ -59,7 +60,10 @@
                                                         </tr>
 
                                                 </ul>
-                                            <?php } ?>
+                                            <?php
+                                            $no++;
+                                            }
+                                            ?>
                                             </tbody>
                                         </table>
                                     </div>
