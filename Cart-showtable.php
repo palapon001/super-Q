@@ -1,3 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <script>
+          $(document).ready(function(){
+            updatesum();
+          });
+          
+          function updatesum(){
+            sum=0;
+            $("input[name^='total']").each(function(){
+              sum+=Number($(this).val());
+            });
+            $("#sumofaudi").val(sum);
+          }
+          </script>
+
 <div class="table-responsive">
   <table class="table">
     <tr>
@@ -18,12 +33,12 @@
         <td><?php echo $no; ?></td>
         <td><?php echo $f['ItemName']; ?> </td>
         <td>
-          <input type="text" id="the_input_id<?php echo $no; ?>" class="form-control" value="" required>
+          <input type="text" id="the_input_id<?php echo $no; ?>" class="form-control" value="" onchange="updatesum();"  required>
         </td>
         <td>
-          <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
+          <!-- <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script> -->
 
-          <script type='text/javascript'>
+          <!-- <script type='text/javascript'>
             $(function() {
 
               $('#the_input_id<?php echo $no; ?>').keyup(function() {
@@ -37,11 +52,14 @@
               };
 
             });
-          </script>
+          </script> -->
+         
 
-          <div name="pree" id="total<?php echo $no; ?>" value="">
-            <?php echo $f['TotalPrice']; ?>
-          </div>
+            <input name="total" type="text" value="3" onchange="updatesum();">
+
+          <!-- <div name="pree" id="total<?php echo $no; ?>" value="">
+            <?php //echo $f['TotalPrice']; ?>
+          </div> -->
 
 
         </td>
