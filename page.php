@@ -44,38 +44,41 @@ if (!$_SESSION["id"]) {  //check session
                 </button>
                 <div class="collapse" id="collapseExample<?php echo $no; ?>">
                     <div class="card card-body">
-                        <?php
-                        $itemt_id = $f['item_type_name'];
-                        $qitem = " SELECT * FROM item where ItemTypeID = '$itemt_id' ";
-                        $qi = mysqli_query($con, $qitem);
-                        $no = 1;
-                        while ($f = mysqli_fetch_assoc($qi)) {
-                        ?>
+                        <div class="container text-center">
+                            <div class="row">
+                                <?php
+                                $itemt_id = $f['item_type_name'];
+                                $qitem = " SELECT * FROM item where ItemTypeID = '$itemt_id' ";
+                                $qi = mysqli_query($con, $qitem);
+                                $no = 1;
+                                while ($f = mysqli_fetch_assoc($qi)) {
+                                ?>
 
 
-                            <div class="col-md-auto">
-                                <div class="card mt-3" style="width: 18rem;">
-                                    <img src="<?php echo $f['imageFileName']; ?>" onerror="this.onerror=null; this.src='Logo.png'" class="card-img-top" width="200" height="200">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
-                                        <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
-                                        <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
-                                        <form action="Cart-add.php" method="post">
-                                            <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
-                                            <input type="hidden" name="QTY" value="1">
-                                            <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
-                                            <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
-                                        </form>
+                                    <div class="col-md-auto">
+                                        <div class="card mt-3" style="width: 18rem;">
+                                            <img src="<?php echo $f['imageFileName']; ?>" onerror="this.onerror=null; this.src='Logo.png'" class="card-img-top" width="200" height="200">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
+                                                <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
+                                                <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
+                                                <form action="Cart-add.php" method="post">
+                                                    <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
+                                                    <input type="hidden" name="QTY" value="1">
+                                                    <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
+                                                    <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+
+
+                                <?php
+                                    $no++;
+                                }
+                                ?>
                             </div>
-
-
-                        <?php
-                            $no++;
-                        }
-                        ?>
-
+                        </div>
                     </div>
                 </div>
 
