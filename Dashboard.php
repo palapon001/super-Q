@@ -29,7 +29,7 @@
                 <div class="card text-bg-primary">
                     <div class="card-body">
                         <h2 class="card-title">
-                        <?php
+                            <?php
                             include 'condb.php';
                             $qitem = mysqli_query($con, " SELECT * FROM item  ");
                             $no = 0;
@@ -49,7 +49,7 @@
                 <div class="card text-bg-danger">
                     <div class="card-body">
                         <h2 class="card-title">
-                        <?php
+                            <?php
                             include 'condb.php';
                             $qitemtype = mysqli_query($con, " SELECT * FROM item_type  ");
                             $no = 0;
@@ -67,7 +67,7 @@
                 <div class="card text-bg-success">
                     <div class="card-body">
                         <h2 class="card-title">
-                        <?php
+                            <?php
                             include 'condb.php';
                             $qsales_person = mysqli_query($con, " SELECT * FROM sales_person  ");
                             $no = 0;
@@ -81,22 +81,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card text-bg-info">
-                    <div class="card-body">
-                        <h2 class="card-title">
-                        <?php
-                        //
-                            include 'condb.php';
-                            $qsale = mysqli_query($con, " SELECT * FROM sale  ");
-                            $no = 0;
-                            while ($f = mysqli_fetch_assoc($qsale)) {
-                                $no++;
-                            }
-                            echo $no;
-                            ?>
-                        </h2>
-                        <p class="card-text">จำนวน รายการขาย</p>
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <div class="card text-bg-info">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <?php
+                                //
+                                include 'condb.php';
+                                $qsale = mysqli_query($con, " SELECT * FROM sale  ");
+                                $no = 0;
+                                while ($f = mysqli_fetch_assoc($qsale)) {
+                                    $no++;
+                                }
+                                echo $no;
+                                ?>
+                            </h2>
+                            <p class="card-text">จำนวน รายการขาย</p>
+                        </div>
                     </div>
                 </div>
             </div>
