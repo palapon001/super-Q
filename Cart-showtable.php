@@ -19,7 +19,7 @@
         <td><?php echo $f['ItemName']; ?> </td>
         <td>
           <div class="input-group mb-3">
-            <input type="text" name="ip<?php echo $no; ?>" id="ip<?php echo $no; ?>" class="form-control" placeholder="กรอกจำนวนสินค้า" value="0" required>
+            <input type="text" name="ip<?php echo $no; ?>" id="ip<?php echo $no; ?>" class="form-control" placeholder="กรอกจำนวนสินค้า" required>
             <span class="input-group-text">x<?php echo $f['TotalPrice']; ?></span>
           </div>
         </td>
