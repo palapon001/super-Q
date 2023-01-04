@@ -81,7 +81,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+        </div>
+        <div class="row mb-2">
+            <div class="col-sm-6 mb-2">
                 <div class="card text-bg-info">
                     <div class="card-body">
                         <h2 class="card-title">
