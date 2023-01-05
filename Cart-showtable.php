@@ -53,8 +53,7 @@
     echo "</table>";
     ?>
     <h1>
-      ราคารวม :
-      <div id="tot-qty">0</div>
+      ราคารวม : <div id="tot-qty">0</div>
     </h1>
 
 </div>

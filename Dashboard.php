@@ -39,7 +39,7 @@
                             echo $no;
                             ?>
                         </h2>
-                        <p class="card-text">จำนวน สินค้า</p>
+                        <p class="card-text">สินค้า</p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                             echo $no;
                             ?>
                         </h2>
-                        <p class="card-text">จำนวน ประเภทสินค้า</p>
+                        <p class="card-text">จำนวน ประเภทข้าว</p>
                     </div>
                 </div>
             </div>
