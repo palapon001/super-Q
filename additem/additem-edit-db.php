@@ -8,13 +8,24 @@ $Amount = $_POST["Amount"];
 $Price = $_POST["Price"];
 $imageFileName = $_POST["imageFileName"];
 $ItemTypeID = $_POST["ItemTypeID"];
+$Member = $_POST["Member"];
+$seller = $_POST["seller"];
+$Moisture = $_POST["Moisture"];
 //ทำการปรับปรุงข้อมูลที่จะแก้ไขลงใน database 
 
 $sql = "UPDATE `item` 
-SET `ItemID`= '$ItemID',`ItemName`='$ItemName'
-,`Amount`='$Amount',`Price`='$Price'
-,`imageFileName`='$imageFileName'
-,`ItemTypeID`='$ItemTypeID' WHERE ItemID = '$ItemID' ";
+SET 
+`ItemID`= '$ItemID',
+`ItemName`='$ItemName'
+,`Amount`='$Amount',
+`Price`='$Price',
+`imageFileName`='$imageFileName',
+`ItemTypeID`='$ItemTypeID',
+`Member`='$Member' ,
+`seller`='$seller' ,
+`Moisture`='$Moisture' 
+
+WHERE ItemID = '$ItemID' ";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 

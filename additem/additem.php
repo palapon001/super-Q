@@ -24,11 +24,15 @@ mysqli_query($con, "SET NAMES UTF8");
                 <label class="form-label">เพิ่ม item : </label>
                 <input class="mt-3 form-control" type="text" name="ItemName" placeholder="ชื่อสินค้า" required />
                 <input class="mt-3 form-control" type="number" name="Amount" placeholder="จำนวน" required />
+                <div class="input-group mb-3">
                 <input class="mt-3 form-control" type="number" name="Price" placeholder="ราคา" required />
+                <input class="mt-3 form-control" type="number" name="Moisture" placeholder="ความชื้น" required />
+                </div>
                 <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ"/>
                 <?php include 'selectProductType.php' ; ?>
+                <?php include 'selectMember.php' ; ?>
+                <input class="mt-3 form-control" type="text" name="seller" placeholder="กรอกชื่อ-นามสกุล" required />
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
-
             </form>
             <p>
             <p>

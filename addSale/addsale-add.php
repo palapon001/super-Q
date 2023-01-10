@@ -18,14 +18,19 @@ while ($f = mysqli_fetch_assoc($qcart)) {
     $sQTY = $f['QTY'];
     $sTotalPrice = $f['TotalPrice'];
 
+    $qsale = mysqli_query($con, " SELECT * FROM item where ItemName = $sItemName  ");
+    while ($f = mysqli_fetch_assoc($qsale)) {
+        $ItemID = $f['ItemID'];
+    }
+
     echo 'Cartno = ' . $f['Cartno'];
     echo 'ItemName = ' . $f['ItemName'];
     echo 'QTY = ' . $f['QTY'];
     echo 'TotalPrice = ' . $f['TotalPrice'] . '<br>';
     $totalsum += $f['TotalPrice'];
 
-    $sql = "INSERT INTO `saledetail` (`SaleDetailNo`, `SaleNo`, `ItemName`, `QTY`, `TotalPrice`) 
-            VALUES (NULL, 'ORDER-$no', '$sItemName', '$sQTY', '$sTotalPrice')";
+    $sql = "INSERT INTO `saledetail` (`SaleDetailNo`, `SaleNo`,`ItemID`, `ItemName`, `QTY`,`oldPrice`, `TotalPrice`) 
+            VALUES (NULL, 'ORDER-$no','$ItemID','$sItemName', '$sQTY','0', '$sTotalPrice')";
     $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 }
 $sql1 = "INSERT INTO `sale` (`saleno`, `saledate`, `totalsum`) 

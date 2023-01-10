@@ -6,6 +6,10 @@ $Amount = $_POST["Amount"];
 $Price = $_POST["Price"];
 $imageFileName = $_POST["imageFileName"];
 $ItemTypeID = $_POST["ItemTypeID"];
+$Member = $_POST["Member"];
+$seller = $_POST["seller"];
+$Moisture = $_POST["Moisture"];
+
 // เช็คว่ามีข้อมูลนี้อยู่หรือไม่
 $check = "select * from item  where ItemName = '$ItemName' ";
 $result1 = mysqli_query($con,$check) or die("$check");
@@ -26,8 +30,8 @@ $result1 = mysqli_query($con,$check) or die("$check");
 if ($imageFileName == "") {
 	$imageFileName = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVq_1AdQgj9JVocJh8SPhVPDoQxugEO0kB-g&usqp=CAU&fbclid=IwAR1hDAjhrx60gq3dvi1Y_JdKpMkQYVMDp4u2iw78aydVSumURZux_qRObeQ" ;
 }
-$sql = "INSERT INTO item(ItemName,Amount,Price,imageFileName,ItemTypeID)
-			 VALUES('$ItemName','$Amount','$Price','$imageFileName','$ItemTypeID')";
+$sql = "INSERT INTO item(ItemName,Amount,Price,imageFileName,ItemTypeID,Member,seller,Moisture)
+			 VALUES('$ItemName','$Amount','$Price','$imageFileName','$ItemTypeID','$Member','$seller','$Price*$Moisture')";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql " );
   }

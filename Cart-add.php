@@ -18,8 +18,14 @@ $TotalPrice = $_POST["TotalPrice"];
 
  // }else{
 //เพิ่มเข้าไปในฐานข้อมูล
-$sql = "INSERT INTO `cart` (`Cartno`, `ItemName`, `QTY`, `TotalPrice`) 
-			VALUES (NULL, '$ItemName', '$QTY', '$TotalPrice')";
+                        //
+$qsale = mysqli_query($con, " SELECT * FROM item where ItemName = $ItemName  ");
+    while ($f = mysqli_fetch_assoc($qsale)) {
+        $ItemID = $f['ItemID'];
+    }
+
+$sql = "INSERT INTO `cart` (`Cartno`,`ItemID`,`ItemName`, `QTY`, `TotalPrice`) 
+			VALUES (NULL,'$ItemID', '$ItemName', '$QTY', '$TotalPrice')";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql " );
   //}

@@ -1,10 +1,10 @@
 <select class="mt-3 form-control" name="ItemTypeID">
-    <option value="" selectdisabled>ประเภทสินค้า</option>
+    <option value="0" selectdisabled>ประเภทสินค้า</option>
     <?php
     $qitem_type = mysqli_query($con, " SELECT * FROM item_type  ");
     while ($f = mysqli_fetch_assoc($qitem_type)) {
     ?>
-        <option value="<?php echo $f['item_type_name']; ?>"> <?php echo $f['item_type_name']; ?> </option>
+        <option value="<?php echo $f['item_type_id']; ?>"> <?php echo $f['item_type_name']; ?> </option>
     <?php
     }
     ?>
