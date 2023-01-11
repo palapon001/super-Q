@@ -63,11 +63,7 @@ if (!$_SESSION["id"]) {  //check session
                                                 <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
                                                 <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
                                                 <p class="card-text">ประเภทข้าว : <?php echo $f['ItemTypeID']; ?></p>
-                                                <form action="Cart-add.php" method="post">
-                                                    <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
-                                                    <input type="hidden" name="QTY" value="1">
-                                                    <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
-                                                    <?php
+                                                <?php
                                                         $citem = $f['ItemName'];
                                                         $no = 1;
                                                         $scart = " SELECT * FROM cart ";
@@ -77,8 +73,11 @@ if (!$_SESSION["id"]) {  //check session
                                                             $no++;
                                                         }
                                                     ?>
+                                                <form action="Cart-add.php" method="post">
+                                                    <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
+                                                    <input type="hidden" name="QTY" value="1">
+                                                    <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
                                                     <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
-
                                                 </form>
                                             </div>
                                         </div>
