@@ -42,6 +42,8 @@
           $('input[name=total<?php echo $no; ?>]').val(qty * <?php echo $f['TotalPrice']; ?>);
           $("form#lines-form-1 :input").each(function() {
             tot += Number($(this).val());
+            document.querySelector('input[id="qty<?php echo $no; ?>"]').value = document.getElementById('ip<?php echo $no; ?>').value ;
+            document.querySelector('input[id="stotal<?php echo $no; ?>"]').value = document.getElementById('i<?php echo $no; ?>').value ;
           });
           $('#tot-qty').text(tot);
         });

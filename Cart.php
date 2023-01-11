@@ -23,6 +23,19 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
         <form action="./addSale/addsale-add.php" method="post">
+          <?php
+          $no = 1;
+          $sql = " SELECT * FROM cart ORDER BY Cartno ASC ";
+          $q = mysqli_query($con, $sql);
+          while ($f = mysqli_fetch_assoc($q)) {
+          ?>
+          <input class="form-control" name="ItemID<?php echo $no; ?>" id="ItemID<?php echo $no; ?>" type="text" value="<?php echo $f['ItemID'];?>">
+            <input class="form-control" name="qty<?php echo $no; ?>" id="qty<?php echo $no; ?>" type="text" value="">
+            <input class="form-control" name="s<?php echo $no; ?>" id="stotal<?php echo $no; ?>" type="text" value="">
+          <?php
+          $no++;
+          }
+          ?>
           <input type="submit" class="btn btn-primary" value="Payment">
         </form>
       </div>

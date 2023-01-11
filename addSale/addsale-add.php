@@ -9,16 +9,28 @@ $qsaleNo = mysqli_query($con, $saleNo);
 while ($f = mysqli_fetch_assoc($qsaleNo)) {
     $no++;
 }
-echo 'saleNo = ' . $no;
+echo 'saleNo = ' . $no ."<br>";
 $totalsum = 0;
 $sql1 = "INSERT INTO `sale` (`saleno`, `saledate`, `totalsum`) 
             VALUES ('ORDER-$no', '$date-$time', '$totalsum ')";
 $result = mysqli_query($con, $sql1) or die("Error in query: $sql1 ");
-echo 'totalsum = ' . $totalsum;
 
+
+$in = 1;
 $tcart = " SELECT * FROM cart ORDER BY Cartno ASC ";
 $qcart = mysqli_query($con, $tcart);
 while ($fcart = mysqli_fetch_assoc($qcart)) {
+    //UPDATE CART
+    $sNAME = "s".$in ;
+    $qtyNAME = "qty".$in ;
+    $itemidNAME = "ItemID".$in ; 
+    $sItemID = $_POST[$itemidNAME];
+    $QTY = $_POST[$qtyNAME];
+    $TotalPrice = $_POST[$sNAME];
+    $ucart = "UPDATE cart SET QTY = $QTY , TotalPrice = $TotalPrice where ItemID = $sItemID";
+    $result1 = mysqli_query($con, $ucart) or die("Error in query: $ucart ");
+    $in++;
+    //UPDATE CART
     $sItemName = $fcart['ItemName'];
     $sQTY = $fcart['QTY'];
     $sTotalPrice = $fcart['TotalPrice'];
@@ -28,11 +40,12 @@ while ($fcart = mysqli_fetch_assoc($qcart)) {
         $ItemID = $fqsale['ItemID'];
     }
 
-    echo 'Cartno = ' . $fcart['Cartno'];
-    echo 'ItemName = ' . $fcart['ItemName'];
-    echo 'QTY = ' . $fcart['QTY'];
-    echo 'TotalPrice = ' . $fcart['TotalPrice'] . '<br>';
-    $totalsum += $fcart['TotalPrice'];
+    echo 'fCartno = ' . $fcart['Cartno']."<br>";
+    echo 'fItemName = ' . $fcart['ItemName']."<br>";
+    echo 'fQTY = ' . $fcart['QTY']."<br>";
+    echo 'fTotalPrice = ' . $fcart['TotalPrice'] . '<br>';
+    $totalsum += $TotalPrice;
+    echo 'fTotalsum = ' . $totalsum . '<br>';
 
     $sql = "INSERT INTO `saledetail` (`SaleDetailNo`, `SaleNo`,`ItemID`, `ItemName`, `QTY`,`oldPrice`, `TotalPrice`) 
             VALUES (NULL, 'ORDER-$no','$ItemID','$sItemName', '$sQTY','0', '$sTotalPrice')";
@@ -41,10 +54,10 @@ while ($fcart = mysqli_fetch_assoc($qcart)) {
 $usale_person = "UPDATE sale SET  
 				totalsum = $totalsum
 			WHERE saleno ='ORDER-$no' ";
-$result1= mysqli_query($con, $usale_person) or die("Error in query: $usale_person " );
+$result1 = mysqli_query($con, $usale_person) or die("Error in query: $usale_person ");
 
-$sql2 = "DELETE FROM cart ";
-$result = mysqli_query($con, $sql2) or die("Error in query: $sql2 ");
+// $sql2 = "DELETE FROM cart ";
+// $result = mysqli_query($con, $sql2) or die("Error in query: $sql2 ");
 
 //}
 //ปิดการเชื่อมต่อ database
@@ -54,7 +67,7 @@ mysqli_close($con);
 if ($result) {
     echo "<script type='text/javascript'>";
     echo "alert('สำเร็จ');";
-   // echo "window.location = 'addsale.php'; ";
+    // echo "window.location = 'addsale.php'; ";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";
