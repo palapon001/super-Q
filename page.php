@@ -62,14 +62,29 @@ if (!$_SESSION["id"]) {  //check session
                                                 <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                                 <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
                                                 <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
-                                                <p class="card-text">ประเภทข้าว : 
-                                                    <?php 
+                                                <p class="card-text">
+                                                    <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" disabled>
+                                                        <?php
+                                                        if ($f['Member'] == 0) {
+                                                            echo $f['seller'];
+                                                        } else {
+                                                            $iuser = $f['Member'];
+                                                            $isuser = mysqli_query($con, " SELECT * FROM user where member_id = '$iuser'  ");
+                                                            while ($isu = mysqli_fetch_assoc($isuser)) {
+                                                                echo $isu['hname'] . " " . $isu['name'] . " " . $isu['lname'] . " " . $isu['tel'];
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </button>
+                                                </p>
+                                                <p class="card-text">ประเภทข้าว :
+                                                    <?php
                                                     $item_t_id = $f['ItemTypeID'];
                                                     $itemtypename = mysqli_query($con, " SELECT * FROM item_type where item_type_id = $item_t_id  ");
                                                     while ($a = mysqli_fetch_assoc($itemtypename)) {
-                                                        echo $a['item_type_name']; 
+                                                        echo $a['item_type_name'];
                                                     }
-                                                        ?>
+                                                    ?>
                                                 </p>
                                                 <form action="Cart-add.php" method="post">
                                                     <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
@@ -113,21 +128,36 @@ if (!$_SESSION["id"]) {  //check session
                                     <h5 class="card-title"><?php echo $f['ItemName']; ?></h5>
                                     <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
                                     <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
+                                    <p class="card-text">
+                                        <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" disabled>
+                                            <?php
+                                            if ($f['Member'] == 0) {
+                                                echo $f['seller'];
+                                            } else {
+                                                $iuser = $f['Member'];
+                                                $isuser = mysqli_query($con, " SELECT * FROM user where member_id = '$iuser'  ");
+                                                while ($isu = mysqli_fetch_assoc($isuser)) {
+                                                    echo $isu['hname'] . " " . $isu['name'] . " " . $isu['lname'] . " " . $isu['tel'];
+                                                }
+                                            }
+                                            ?>
+                                        </button>
+                                    </p>
                                     <p class="card-text">ประเภทข้าว :
-                                    <?php 
-                                                    $item_t_id = $f['ItemTypeID'];
-                                                    $itemtypename = mysqli_query($con, " SELECT * FROM item_type where item_type_id = $item_t_id  ");
-                                                    while ($a = mysqli_fetch_assoc($itemtypename)) {
-                                                        echo $a['item_type_name']; 
-                                                    }
-                                                        ?>
-                                </p>
-                                <form action="Cart-add.php" method="post">
-                                                <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
-                                                <input type="hidden" name="QTY" value="1">
-                                                <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
-                                                <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
-                                            </form>
+                                        <?php
+                                        $item_t_id = $f['ItemTypeID'];
+                                        $itemtypename = mysqli_query($con, " SELECT * FROM item_type where item_type_id = $item_t_id  ");
+                                        while ($a = mysqli_fetch_assoc($itemtypename)) {
+                                            echo $a['item_type_name'];
+                                        }
+                                        ?>
+                                    </p>
+                                    <form action="Cart-add.php" method="post">
+                                        <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
+                                        <input type="hidden" name="QTY" value="1">
+                                        <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
+                                        <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
+                                    </form>
 
                                 </div>
                             </div>
