@@ -29,9 +29,9 @@
           $q = mysqli_query($con, $sql);
           while ($f = mysqli_fetch_assoc($q)) {
           ?>
-          <input class="form-control" name="ItemID<?php echo $no; ?>" id="ItemID<?php echo $no; ?>" type="text" value="<?php echo $f['ItemID'];?>">
-            <input class="form-control" name="qty<?php echo $no; ?>" id="qty<?php echo $no; ?>" type="text" value="">
-            <input class="form-control" name="s<?php echo $no; ?>" id="stotal<?php echo $no; ?>" type="text" value="">
+          <input class="form-control" name="ItemID<?php echo $no; ?>" id="ItemID<?php echo $no; ?>" type="hidden" value="<?php echo $f['ItemID'];?>">
+            <input class="form-control" name="qty<?php echo $no; ?>" id="qty<?php echo $no; ?>" type="hidden" value="">
+            <input class="form-control" name="s<?php echo $no; ?>" id="stotal<?php echo $no; ?>" type="hidden" value="">
           <?php
           $no++;
           }
