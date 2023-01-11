@@ -64,6 +64,7 @@ $result = mysqli_query($con, $sql2) or die("Error in query: $sql2 ");
 mysqli_close($con);
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
 
+
 if ($result) {
     echo "<script type='text/javascript'>";
     echo "alert('สำเร็จ');";
