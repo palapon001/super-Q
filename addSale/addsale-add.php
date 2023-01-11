@@ -48,7 +48,7 @@ while ($fcart = mysqli_fetch_assoc($qcart)) {
     echo 'fTotalsum = ' . $totalsum . '<br>';
 
     $sql = "INSERT INTO `saledetail` (`SaleDetailNo`, `SaleNo`,`ItemID`, `ItemName`, `QTY`,`oldPrice`, `TotalPrice`) 
-            VALUES (NULL, 'ORDER-$no','$ItemID','$sItemName', '$sQTY','0', '$sTotalPrice')";
+            VALUES (NULL, 'ORDER-$no','$ItemID','$sItemName', '$QTY','0', '$TotalPrice')";
     $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 }
 $usale_person = "UPDATE sale SET  
