@@ -63,16 +63,14 @@ if (!$_SESSION["id"]) {  //check session
                                                 <p class="card-text">จำนวน : <?php echo $f['Amount']; ?></p>
                                                 <p class="card-text">ราคา : <?php echo $f['Price']; ?></p>
                                                 <p class="card-text">ประเภทข้าว : <?php echo $f['ItemTypeID']; ?></p>
+                                                <p class="card-text">kkk</p>
                                                 <?php
-                                                        $citem = $f['ItemName'];
-                                                        $no = 1;
                                                         $scart = " SELECT * FROM cart ";
                                                         $qcart = mysqli_query($con, $scart);
                                                         while ($fcart = mysqli_fetch_assoc($qcart)) {
                                                         ?>
                                                             <p class="card-text">kkk</p>
                                                         <?php
-                                                            $no++;
                                                         }
                                                     ?>
                                                 <form action="Cart-add.php" method="post">
