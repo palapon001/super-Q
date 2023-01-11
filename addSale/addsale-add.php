@@ -56,8 +56,8 @@ $usale_person = "UPDATE sale SET
 			WHERE saleno ='ORDER-$no' ";
 $result1 = mysqli_query($con, $usale_person) or die("Error in query: $usale_person ");
 
-// $sql2 = "DELETE FROM cart ";
-// $result = mysqli_query($con, $sql2) or die("Error in query: $sql2 ");
+$sql2 = "DELETE FROM cart ";
+$result = mysqli_query($con, $sql2) or die("Error in query: $sql2 ");
 
 //}
 //ปิดการเชื่อมต่อ database
@@ -67,7 +67,7 @@ mysqli_close($con);
 if ($result) {
     echo "<script type='text/javascript'>";
     echo "alert('สำเร็จ');";
-    // echo "window.location = 'addsale.php'; ";
+    echo "window.location = 'addsale.php'; ";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";
