@@ -67,7 +67,18 @@ if (!$_SESSION["id"]) {  //check session
                                                     <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
                                                     <input type="hidden" name="QTY" value="1">
                                                     <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
+                                                    <?php
+                                                        $citem = $f['ItemName'];
+                                                        $no = 1;
+                                                        $scart = " SELECT * FROM cart ";
+                                                        $qcart = mysqli_query($con, $scart);
+                                                        while ($f = mysqli_fetch_assoc($qcart)) {
+                                                            echo "kkk" . $no ;
+                                                            $no++;
+                                                        }
+                                                    ?>
                                                     <input type="submit" class="btn btn-primary" value="ใส่ตะกร้า">
+
                                                 </form>
                                             </div>
                                         </div>
