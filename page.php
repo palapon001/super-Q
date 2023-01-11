@@ -68,7 +68,7 @@ if (!$_SESSION["id"]) {  //check session
                                                         $no = 1;
                                                         $scart = " SELECT * FROM cart ";
                                                         $qcart = mysqli_query($con, $scart);
-                                                        while ($f = mysqli_fetch_assoc($qcart)) {
+                                                        while ($fcart = mysqli_fetch_assoc($qcart)) {
                                                         ?>
                                                             <p class="card-text">kkk</p>
                                                         <?php
