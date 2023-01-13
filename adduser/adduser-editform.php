@@ -30,7 +30,7 @@ extract($row);
 
             <form method="post" action="adduser-edit-db.php">
 
-                <input class="mt-3 form-control" name="user_id" value="<?php echo $user_id; ?>" type="text">
+                <input class="mt-3 form-control" name="member_id" value="<?php echo $user_id; ?>" type="text">
 
                 <select class="mt-3 form-control" name="hname">
                     <option value="<?php echo $hname; ?>" selected> <?php echo $hname; ?> </option>

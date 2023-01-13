@@ -2,7 +2,7 @@
 <?php
 include('../condb.php');  
 //สร้างตัวแปรสำหรับรับค่าที่นำมาแก้ไขจากฟอร์ม
-$user_id = $_POST["user_id"];
+$member_id = $_POST["member_id"];
 $hname = $_POST["hname"];
 $name = $_POST["name"];
 $lname = $_POST["lname"];
@@ -11,12 +11,12 @@ $tel = $_POST["tel"];
 //ทำการปรับปรุงข้อมูลที่จะแก้ไขลงใน database 
 
 $sql = "UPDATE user SET  
-				user_id='$user_id', 
+				member_id='$member_id', 
 				hname='$hname',
 				name ='$name',
 				lname='$lname',
 				tel='$tel'
-			WHERE user_id='$user_id' ";
+			WHERE member_id='$member_id' ";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql " );
 

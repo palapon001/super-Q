@@ -22,7 +22,7 @@ mysqli_query($con, "SET NAMES UTF8");
         <div class="card-body">
             <form neme="form" method="post" action="adduser-add.php">
                 <label>เพิ่ม สมาชิก : </label>
-                <input class="mt-3 form-control" type="text" name="user_id" placeholder="เลขบัตรประชาชน" />
+                <input class="mt-3 form-control" type="text" name="member_id" placeholder="เลขบัตรประชาชน" />
                 <select class="mt-3 form-control" name="hname">
                     <option value="" selected disabled hidden>คำนำหน้าชื่อ</option>
                     <option value="นาย">นาย</option>
