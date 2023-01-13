@@ -29,8 +29,12 @@ mysqli_query($con, "SET NAMES UTF8");
                 <input class="mt-3 form-control" type="number" name="Moisture" placeholder="ความชื้น" required />
                 </div>
                 <input class="mt-3 form-control" type="url" name="imageFileName" placeholder="URL ภาพ"/>
+                <div class="mt-3">
                 <?php include 'selectProductType.php' ; ?>
+                </div>
+                <div class="mt-3">
                 <?php include 'selectMember.php' ; ?>
+                </div>
                 <input class="mt-3 form-control" type="text" name="seller" placeholder="กรอกชื่อ-นามสกุล" required />
                 <input class="mt-3 form-control btn btn-primary" type="submit" neme="save" value="save" />
             </form>

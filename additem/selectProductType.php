@@ -1,4 +1,4 @@
-<select class="mt-3 form-control" name="ItemTypeID">
+<select class="form-control" name="ItemTypeID">
     <option value="0" selectdisabled>ประเภทสินค้า</option>
     <?php
     $qitem_type = mysqli_query($con, " SELECT * FROM item_type  ");
