@@ -5,18 +5,18 @@ $ItemName = $_POST["ItemName"];
 $QTY = $_POST["QTY"];
 $TotalPrice = $_POST["TotalPrice"];
 // เช็คว่ามีข้อมูลนี้อยู่หรือไม่
-//$check = "select * from user  where user_id = '$user_id' ";
-//$result1 = mysqli_query($con,$check) or die("$check");
-//  $num=mysqli_num_rows($result1); 
- // if($num > 0)   		
- // {
+$check = "select * from cart  where ItemName = '$ItemName' ";
+$result1 = mysqli_query($con,$check) or die("$check");
+ $num=mysqli_num_rows($result1); 
+ if($num > 0)   		
+ {
 //ถ้ามี username นี้อยู่ในระบบแล้วให้แจ้งเตือน
-	//   echo "<script>";
-	//   echo "alert(' มีแล้ว  !');";
-	//   echo "window.location='adduser.php';";
-	//	 echo "</script>";
+	  echo "<script>";
+	  echo "alert(' อยู่ในตะกร้าแล้ว !');";
+	  echo "window.location='page.php';";
+		 echo "</script>";
 
- // }else{
+  }else{
 //เพิ่มเข้าไปในฐานข้อมูล
                         //
 $qsale = mysqli_query($con, " SELECT * FROM item where ItemName = '$ItemName'  ");
@@ -29,7 +29,7 @@ $sql = "INSERT INTO `cart` (`Cartno`,`ItemID`,`ItemName`, `QTY`, `TotalPrice`)
 			VALUES (NULL,'$qItemID', '$ItemName', '$QTY', '$TotalPrice')";
 
 $result = mysqli_query($con, $sql) or die("Error in query: $sql " );
-  //}
+  }
 //ปิดการเชื่อมต่อ database
 mysqli_close($con);
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
