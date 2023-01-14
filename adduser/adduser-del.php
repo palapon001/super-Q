@@ -1,8 +1,8 @@
 <?php
 include('../condb.php'); 
-$user_id = $_REQUEST["user_id"];
+$member_id = $_REQUEST["member_id"];
 
-$sql = "DELETE FROM user WHERE user_id='$user_id' ";
+$sql = "DELETE FROM user WHERE member_id='$member_id' ";
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม

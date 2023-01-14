@@ -3,10 +3,10 @@ session_start();
 
 include '../condb.php';
 
-$user_id = mysqli_real_escape_string($con, $_GET['user_id']);
+$member_id = mysqli_real_escape_string($con, $_GET['member_id']);
 
 //2. query ข้อมูลจากตาราง  : 
-$sql = "SELECT * FROM user WHERE user_id='$user_id' ";
+$sql = "SELECT * FROM user WHERE member_id='$member_id' ";
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 $row = mysqli_fetch_array($result);
 extract($row);
@@ -25,12 +25,12 @@ extract($row);
 <body>
     <div class="card ">
         <div class="card-body">
-            <h3 class="card-title">แก้ไขข้อมูล <?php echo $user_id; ?> </h3>
+            <h3 class="card-title">แก้ไขข้อมูล <?php echo $member_id; ?> </h3>
             <p class="card-text">
 
             <form method="post" action="adduser-edit-db.php">
 
-                <input class="mt-3 form-control" name="member_id" value="<?php echo $user_id; ?>" type="text">
+                <input class="mt-3 form-control" name="member_id" value="<?php echo $member_id; ?>" type="text">
 
                 <select class="mt-3 form-control" name="hname">
                     <option value="<?php echo $hname; ?>" selected> <?php echo $hname; ?> </option>
