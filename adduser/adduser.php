@@ -37,6 +37,7 @@ mysqli_query($con, "SET NAMES UTF8");
             <p>
             <p>
             <h2>ตาราง User </h2>
+            <a href="adduser-export-xls" class="btn btn-success" >EXPORT EXCEL</a>
             </p>
             <div class="table-responsive">
                 <?php include './adduser-showtable.php'; ?>

@@ -5,7 +5,6 @@
          <a class='btn btn-primary mb-1' href="./adduser/adduser.php">จัดการ สมาชิก</a>
          <a class='btn btn-primary mb-1' href="./additem/additem.php">จัดการ สินค้า</a>
          <a class='btn btn-primary mb-1' href="./additemtype/additemtype.php">จัดการ ประเภทสินค้า</a>
-         <a class='btn btn-primary mb-1' href="./addsale_person/addsale_person.php">จัดการ รับซื้อข้าว</a>
          <a href="logout.php" class="btn btn-danger mb-1">ออกจากระบบ</a>
      </div>
  </div>
