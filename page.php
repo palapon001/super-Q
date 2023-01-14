@@ -152,7 +152,7 @@ if (!$_SESSION["id"]) {  //check session
                                         }
                                         ?>
                                     </p>
-                                    <form action="Cart-add.php" method="post">
+                                    <form action="./Cart_add.php" method="post">
                                         <input type="hidden" name="ItemName" value="<?php echo $f['ItemName']; ?>">
                                         <input type="hidden" name="QTY" value="1">
                                         <input type="hidden" name="TotalPrice" value="<?php echo $f['Price']; ?>">
