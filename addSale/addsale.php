@@ -54,14 +54,21 @@
                                                         <tr>
                                                             <td> <?php echo $no; ?> </td>
                                                             <td> <?php echo $g['SaleNo']; ?></td>
-                                                            <td> <?php echo $g['ItemName']; ?></td>
+                                                            <?php
+                                                            $ItemID = $g['ItemID'];
+                                                            $qitemid = mysqli_query($con, " SELECT * FROM item where ItemID = $ItemID  ");
+                                                            while ($a = mysqli_fetch_assoc($qitemid)) {
+                                                            ?>
+                                                                <td> <?php echo $a['ItemName']; ?></td>
+                                                            <?php } ?>
+
                                                             <td> <?php echo $g['QTY']; ?></td>
                                                             <td> <?php echo $g['TotalPrice']; ?></td>
                                                         </tr>
 
                                                 </ul>
                                             <?php
-                                            $no++;
+                                                $no++;
                                             }
                                             ?>
                                             </tbody>
