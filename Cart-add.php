@@ -23,6 +23,7 @@ $qsale = mysqli_query($con, " SELECT * FROM item where ItemName = $ItemName  ");
     while ($f = mysqli_fetch_assoc($qsale)) {
         $ItemID = $f['ItemID'];
     }
+	
 
 $sql = "INSERT INTO `cart` (`Cartno`,`ItemID`,`ItemName`, `QTY`, `TotalPrice`) 
 			VALUES (NULL,'$ItemID', '$ItemName', '$QTY', '$TotalPrice')";
