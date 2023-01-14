@@ -27,7 +27,7 @@ while ($fcart = mysqli_fetch_assoc($qcart)) {
     $sItemID = $_POST[$itemidNAME];
     $QTY = $_POST[$qtyNAME];
     $TotalPrice = $_POST[$sNAME];
-    $ucart = "UPDATE cart SET QTY = $QTY , TotalPrice = $TotalPrice where ItemID = $sItemID";
+    $ucart = "UPDATE cart SET QTY = $QTY , TotalPrice = $TotalPrice where ItemID = '$sItemID' ";
     $result1 = mysqli_query($con, $ucart) or die("Error in query: $ucart ");
     $in++;
     //UPDATE CART
@@ -35,7 +35,7 @@ while ($fcart = mysqli_fetch_assoc($qcart)) {
     $sQTY = $fcart['QTY'];
     $sTotalPrice = $fcart['TotalPrice'];
 
-    $qsale = mysqli_query($con, " SELECT * FROM item where ItemName = $sItemName  ");
+    $qsale = mysqli_query($con, " SELECT * FROM item where ItemName = '$sItemName'  ");
     while ($fqsale = mysqli_fetch_assoc($qsale)) {
         $ItemID = $fqsale['ItemID'];
     }
