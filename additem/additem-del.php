@@ -2,7 +2,7 @@
 include('../condb.php'); 
 $ItemID = $_REQUEST["ItemID"];
 
-$sql = "DELETE FROM Item WHERE ItemID='$ItemID' ";
+$sql = "DELETE FROM item WHERE ItemID='$ItemID' ";
 $result = mysqli_query($con, $sql) or die("Error in query: $sql ");
 
 //จาวาสคริปแสดงข้อความเมื่อบันทึกเสร็จและกระโดดกลับไปหน้าฟอร์ม
