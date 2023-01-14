@@ -28,6 +28,7 @@ mysqli_query($con, "SET NAMES UTF8");
             <p>
             <p>
             <h2>ตาราง ประเภท </h2>
+            <a href="additemtype-export-xls.php" class="btn btn-success" >EXPORT EXCEL</a>
             </p>
             <div class="table-responsive">
                 <?php include './additemtype-showtable.php' ?>
