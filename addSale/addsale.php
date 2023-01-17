@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +77,7 @@
                                     </div>
                                     <div class="card-body">
                                         <h5><?php echo 'ราคารวม = ' . $f['totalsum']; ?></h5>
+                                        <a href="../report.php?saleno=<?php echo $saleno ; ?>">พิมพ์รายการ</a>
                                     </div>
                                 </div>
                             </div>
