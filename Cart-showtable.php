@@ -42,8 +42,8 @@
           $('input[name=total<?php echo $no; ?>]').val(qty * <?php echo $f['TotalPrice']; ?>);
           $("form#lines-form-1 :input").each(function() {
             tot += Number($(this).val());
-            document.querySelector('input[id="qty<?php echo $no; ?>"]').value = document.getElementById('ip<?php echo $no; ?>').value ;
-            document.querySelector('input[id="stotal<?php echo $no; ?>"]').value = document.getElementById('i<?php echo $no; ?>').value ;
+            document.querySelector('input[id="qty<?php echo $no; ?>"]').value = document.getElementById('ip<?php echo $no; ?>').value;
+            document.querySelector('input[id="stotal<?php echo $no; ?>"]').value = document.getElementById('i<?php echo $no; ?>').value;
           });
           $('#tot-qty').text(tot);
         });
@@ -54,8 +54,10 @@
 
     echo "</table>";
     ?>
-    <h1>
-      ราคารวม : <div id="tot-qty">0</div>
-    </h1>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">ราคารวม :</span>
+      <div class="form-control" id="tot-qty">0</div>
+    </div>
 
 </div>
