@@ -18,11 +18,16 @@ if (!$_SESSION["id"]) {  //check session
     include 'bootstrap.php';
     include 'Nav.php';
     ?>
-
-    <div class="card">
+ <div class="card ">
+        <div class="card-body">
+        <?php
+            include 'Dashboard.php';
+            ?>
+        </div>
+ </div>
+    <div class="card container text-center">
         <div class="card-body">
             <?php
-            include 'Dashboard.php';
             include 'tabbar.php';
             ?>
         </div>

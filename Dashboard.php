@@ -1,10 +1,4 @@
 <p>
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Dashboard System
-    </a>
-</p>
-<p>
-<div class="collapse" id="collapseExample">
     <div class="card card-body">
         <div class="row mb-2">
             <div class="col-sm-6 mb-2">
@@ -85,5 +79,4 @@
             </div>
         </div>
     </div>
-</div>
 </p>
