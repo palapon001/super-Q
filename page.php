@@ -25,7 +25,7 @@ if (!$_SESSION["id"]) {  //check session
             ?>
         </div>
  </div>
-    <div class="card container text-center">
+  <div class="card container text-center">
         <div class="card-body">
             <?php
             include 'tabbar.php';
